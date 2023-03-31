@@ -1,0 +1,66 @@
+        .beige{
+            background-color:#e3e3d9;
+        }
+
+        .black{
+            background-color:#000;
+        }
+
+        .brown{
+            background-color:#bcb4af;
+        }
+
+        .gray{
+            background-color:#e5e5e5;
+        }
+
+        .lightGray{
+            background-color:#f1f1f2;
+        }
+
+        .uk-card{
+           border-radius: 25px;
+        }
+
+        .uk-button{
+           border-radius: 25px;
+           border-color:#000;
+           border-width:2px;
+        }
+
+        .menu6 {
+            font-size: 15px;
+            font-family:arial;
+        }
+
+        .white{
+            color:#fff
+        }
+
+        .uk-search-default{
+            border-radius: 25px;
+            color:#d1d1d1;
+            border-width:2px;
+        }
+
+        .uk-search-input{
+            border-radius: 25px;
+        }
+
+        .BackWhite{
+            background-color:#f8f8f8;
+        }
+
+        .defaultBlack{
+            color:#000;
+        }
+
+         .uk-form-large{
+            border-radius:30px;
+            border-color:#000;
+            border-width:2px;
+         }
+
+        .uk-navbar-container{
+            background:#fff;
+        }

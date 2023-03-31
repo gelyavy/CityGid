@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="cfc08fba-b28f-429f-aa9c-80a9727b8aa1" name="CityGid" url="jdbc:postgresql://localhost:5432/CityGid" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>
