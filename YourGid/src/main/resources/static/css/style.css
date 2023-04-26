@@ -25,7 +25,6 @@
         .uk-button{
            border-radius: 25px;
            border-color:#000;
-           border-width:2px;
         }
 
         .menu6 {
@@ -47,8 +46,8 @@
             border-radius: 25px;
         }
 
-        .BackWhite{
-            background-color:#f8f8f8;
+        .BackColor{
+            background-color:#EFEFEF;
         }
 
         .defaultBlack{
@@ -62,5 +61,8 @@
          }
 
         .uk-navbar-container{
-            background:#fff;
+            background-color:#EFEFEF;
         }
+
+
+

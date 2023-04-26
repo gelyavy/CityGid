@@ -27,11 +27,6 @@
              color:#000;
         }
 
-
-        img{
-            border-radius: 25px 25px 0 0;
-        }
-
         .menu1{
             font-size: 20px;
             font-family:arial;
@@ -43,131 +38,171 @@
             color:#000;
         }
 
-        .menu4{
-            font-size:25px;
+        .MainText{
+            font-size:23px;
             color:#000;
         }
 
-        .menu5{
-            font-size:18px;
+        .Font16White{
+            font-size:16px;
+            color:#fff;
+        }
+
+        .Font22Black{
+            font-size:22px;
             color:#000;
         }
+
+        .BigButton{
+            border-width:2px;
+            border-radius: 35px;
+            border-color:#000;
+            background: #000;
+        }
+
+        .LinkStyle{
+            text-decoration: none;
+            color: #000;
+            font-size:20px;
+        }
+
+
 
     </style>
 </head>
 <body>
-    <nav class="BackWhite uk-navbar-container uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove-left uk-background-default" uk-navbar>
-              <div class="uk-navbar-left uk-margin-left">
-                   <a href="/" class="uk-navbar-item uk-logo"><img src="/static/images/Логотип.png" height="50px" width="160px" alt="NAME"></a>
+<div class="BackColor uk-padding uk-padding-remove-horizontal">
+    <div class="BackColor">
+           <div class="uk-flex uk-flex-between">
+              <div class="uk-padding uk-padding-remove-vertical">
+                   <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
               </div>
-
-              <div class="uk-navbar-right uk-margin-remove-top">
-                    <div class="uk-navbar-item">
-                        <#if user.email??>
-                                <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="LOGO"></a>
-                        </#if>
-                    </div>
+              <div class="uk-padding uk-padding-remove-vertical">
+                <#if !(user.email??)>
+                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
+                <#if (user.email??)>
+                    <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
               </div>
-    </nav>
+           </div>
+    </div>
 
 
-    <div class="uk-padding-small uk-padding-remove-right BackWhite uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-child-width-1-1 uk-margin-remove-top" uk-grid>
-
-            <div class="uk-container uk-container-xlarge uk-background-cover uk-padding-remove-right">
-                    <div class="menu3 uk-margin-bottom uk-text-center uk-align-center uk-text-bolder uk-padding-large uk-padding-remove-vertical uk-margin-top">
-                        <p class="uk-margin-remove">твой гид</p>
-                        <p class="uk-margin-remove">по любимому городу</p>
-                    </div>
-                    <div class="menu2 uk-margin-remove uk-text-center uk-align-center">
-                        <p>ищи интересные места</p>
-                        <p>и перестань думать куда сходить</p>
-                    </div>
-                    <#if !(user.email??)>
-                        <div class="uk-margin-medium-top uk-flex uk-flex-center">
-                             <form action="/registration" method="get">
-                                   <input type="hidden" name="_csrf" value="${_csrf.token}">
-                                   <button class="menu6 uk-button uk-button-default uk-margin-small-right">Регистрация</button>
-                             </form>
-                             <form action="/login" method="get">
-                                   <input type="hidden" name="_csrf" value="${_csrf.token}">
-                                   <input class="menu6 uk-button uk-button-secondary" type="submit" value="Войти"/>
-                             </form>
-                        </div>
-                    </#if>
-
-                    <div class="uk-padding uk-margin-remove uk-align-center uk-flex uk-flex-center uk-child-width-1-2@xl uk-child-width-1-2@m uk-child-width-1-2@s uk-width-1-1">
-                        <form class="uk-search uk-search-default gray" action="/allPlaces" method="get">
-                            <span uk-search-icon></span>
-                            <input class="uk-search-input uk-align-center uk-margin-remove" type="search" aria-label="Search">
+    <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
+        <div class="uk-margin-top">
+            <p class="MainText uk-text-bold"><img src="/static/images/НазваниеХайлайт.png" height="140px" width="220px" alt="PUZZLE">  - Пазл, складная картинка или мозаика — игра-головоломка, в которой требуется составить мозаику из множества фрагментов рисунка различной формы.</p>
+        </div>
+        <div class="uk-inline uk-padding-remove uk-margin-remove">
+            <#if !(user.email??)>
+                    <img src="/static/images/ОранжеваяОбводка.png" height="190px" width="360px" class="uk-align-center uk-margin-top">
+                    <div class="uk-flex uk-position-center">
+                        <form action="/registration" method="get">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
+                            <input class="BigButton Font16White uk-text-lowercase uk-button uk-button-secondary uk-margin-right" type="submit" value="Регистрация"/>
+                        </form>
+                        <form action="/login" method="get">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
+                            <input class="BigButton Font16White uk-text-lowercase uk-button uk-button-secondary" type="submit" value="Вход"/>
                         </form>
                     </div>
-            </div>
+            </#if>
+        </div>
+    </div>
 
 
-            <div class="uk-padding-large uk-padding-remove-top uk-padding-remove-right uk-margin-remove uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="finite: true">
-
-                <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-6@m uk-child-width-1-5@s uk-grid-small">
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипБар.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипМагазин.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипКофейня.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипПарк.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="uk-panel">
-                            <img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt="">
-                        </div>
-                    </li>
-                </ul>
-
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-margin-remove-top uk-margin-medium-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-margin-remove-top" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
-            </div>
-
-            <div class="uk-inline uk-margin">
-                <div class="uk-padding-large uk-padding-remove-vertical uk-position-small uk-position-center-left uk-align-center uk-text-bolder menu4">
-                    <p>Популярное</p>
+    <div class="BackColor uk-padding-small uk-padding-remove-vertical uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="finite: true">
+        <ul class="uk-slider-items uk-grid-small">
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt="">
                 </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипБар.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипМагазин.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипКофейня.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипПарк.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипБар.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="uk-panel">
+                    <img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt="">
+                </div>
+            </li>
+        </ul>
 
-                <a href="/allPlaces"><div class="uk-padding-large uk-padding-remove-vertical uk-position-small uk-position-center-right uk-align-center uk-margin-remove-right menu5">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-margin-remove-top uk-margin-medium-left" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-margin-remove-top" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    </div>
+
+
+    <div class="BackColor uk-padding uk-flex uk-flex-between">
+        <div class="uk-text-bolder Font22Black">
+            <p class="uk-margin-small-bottom">Популярное<img src="/static/images/Звездочка.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+        </div>
+        <a href="/allPlaces"><div class="LinkStyle">
                     <p>подробнее</p>
-                </div></a>
-            </div>
+        </div></a>
+    </div>
 
             <div class="uk-position-relative uk-visible-toggle uk-light uk-padding-small uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
                 <ul class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
@@ -197,7 +232,7 @@
                 <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
 
             </div>
-    </div>
+</div>
 </body>
 </html>
 
