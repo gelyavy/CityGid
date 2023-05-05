@@ -43,7 +43,6 @@ public class UserController {
     @GetMapping("/profile/{id}")
     public String profile(@PathVariable("id") Long id, Model model, Principal principal){
         User user = userService.getUserById(id);
-        //model.addAttribute("count", userService.countPlaces(userService.getUserById(id)));
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
         model.addAttribute("profile", user);
         return "profile";
@@ -59,14 +58,10 @@ public class UserController {
 
     //Рандомные места
     @GetMapping("/profile/random")
-    public String getUserRandomPage(Model model, Principal principal){
+    public String getUserRandomPlace(Model model, Principal principal){
         model.addAttribute("place", placeService.getRandomPlacesId());
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
         return "UserRandom";
     }
 
-    //@GetMapping("/profile/random/place")
-   // public void getUserRandomPlaces(Model model){
-   //     model.addAttribute("place", placeService.getRandomPlacesId());
-    //}
 }

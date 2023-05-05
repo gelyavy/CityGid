@@ -39,7 +39,12 @@
         }
 
         .MainText{
-            font-size:23px;
+            font-size:35px;
+            color:#000;
+        }
+
+        .PreMainText{
+            font-size:24px;
             color:#000;
         }
 
@@ -53,6 +58,11 @@
             color:#000;
         }
 
+        .Font22White{
+            font-size:22px;
+            color:#fff;
+        }
+
         .BigButton{
             border-width:2px;
             border-radius: 35px;
@@ -64,6 +74,20 @@
             text-decoration: none;
             color: #000;
             font-size:20px;
+        }
+
+        .ImageStyle{
+            border-radius: 20px;
+        }
+
+        .CardStyle{
+            border-radius: 25px;
+            background-color: #000;
+        }
+
+        .OrangeCard{
+            border-radius: 25px;
+            background-color: #F95B32;
         }
 
 
@@ -90,8 +114,10 @@
 
 
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
-        <div class="uk-margin-top">
-            <p class="MainText uk-text-bold"><img src="/static/images/НазваниеХайлайт.png" height="140px" width="220px" alt="PUZZLE">  - Пазл, складная картинка или мозаика — игра-головоломка, в которой требуется составить мозаику из множества фрагментов рисунка различной формы.</p>
+        <div class="uk-margin-top" uk-grid>
+            <p class="MainText uk-text-bold uk-margin-remove"><img src="/static/images/НазваниеХайлайт.png" height="100px" width="180px" alt="PUZZLE">  - Is who? </p>
+            <p class="PreMainText uk-text-bold uk-margin-remove">проект о любви к своему городу.</p>
+            <p class="PreMainText uk-text-bold uk-margin-remove-top uk-margin-small-bottom">подборки уникальных мест.</p>
         </div>
         <div class="uk-inline uk-padding-remove uk-margin-remove">
             <#if !(user.email??)>
@@ -111,7 +137,7 @@
     </div>
 
 
-    <div class="BackColor uk-padding-small uk-padding-remove-vertical uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="finite: true">
+    <div class="BackColor uk-padding-small uk-padding-remove-vertical uk-margin-small-top uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slider="finite: true">
         <ul class="uk-slider-items uk-grid-small">
             <li>
                 <div class="uk-panel">
@@ -195,13 +221,32 @@
     </div>
 
 
-    <div class="BackColor uk-padding uk-flex uk-flex-between">
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
         <div class="uk-text-bolder Font22Black">
             <p class="uk-margin-small-bottom">Популярное<img src="/static/images/Звездочка.png" height="25px" width="25px" class="uk-margin-small-left"></p>
         </div>
         <a href="/allPlaces"><div class="LinkStyle">
                     <p>подробнее</p>
         </div></a>
+    </div>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
+        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+            <#list places as place>
+                <div>
+                    <div class="CardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/images/${place.previewImageId}" class="ImageStyle">
+                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
+                            <form action="/place/${place.id}" method="get">
+                                <input class="BigButton Font16White uk-text-lowercase uk-button uk-button-secondary" type="submit" value="go" href="/place/${place.id}"/>
+                            </form>
+                    </div>
+                </div>
+            </#list>
+        </div>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
     </div>
 
             <div class="uk-position-relative uk-visible-toggle uk-light uk-padding-small uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">

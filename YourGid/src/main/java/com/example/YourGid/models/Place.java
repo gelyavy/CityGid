@@ -21,20 +21,21 @@ public class Place {
     private Long id;
     @Column(name = "title")
     private String title;
+    @Column(name = "type")
+    private String type;
+    @Column(name = "area")
+    private String area;
+    @Column(name = "address")
+    private String address;
+    @Column(name = "date")
+    private String date;
     @Column(name = "description", columnDefinition = "text")
     private String description;
-    @Column(name = "price")
-    private int price;
-    @Column(name = "city")
-    private String city;
-    @Column(name = "owner")
-    private String owner;
+
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy= "place")
     private List<Image> images = new ArrayList<>();
     private Long previewImageId;
-    //@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
-    //private User user;
     private LocalDateTime dateOfCreated;
 
     @PrePersist

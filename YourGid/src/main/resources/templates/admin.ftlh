@@ -15,16 +15,17 @@
                 <div>
                   <h1>Добавить карточку</h1>
                   <form action="/place/create" method="post" enctype="multipart/form-data">
-                                            Название места: <input type="text" name="title"/><br><br>
-                                            Описание места: <input type="text" name="description"/><br><br>
-                                            Цена места: <input type="number" name="price"/><br><br>
-                                            Город места: <input type="text" name="city"/><br><br>
-                                            Владелец места: <input type="text" name="owner"/><br><br>
-                                            Первая фотография: <input type="file" name="file1"/><br><br>
-                                            Вторая фотография: <input type="file" name="file2"/><br><br>
-                                            Третья фотография: <input type="file" name="file3"/><br><br>
-                                            <input type="hidden" name="_csrf" value="${_csrf.token}">
-                                            <input type="submit" value="Добавить место" />
+                    Название: <input type="text" name="title"/><br><br>
+                    Тип: <input type="text" name="type"/><br><br>
+                    Район: <input type="text" name="area"/><br><br>
+                    Адрес: <input type="text" name="address"/><br><br>
+                    Дата: <input type="text" name="date"/><br><br>
+                    Описание: <input type="text" name="description"/><br><br>
+                    Первая фотография: <input type="file" name="file1"/><br><br>
+                    Вторая фотография: <input type="file" name="file2"/><br><br>
+                    Третья фотография: <input type="file" name="file3"/><br><br>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <input type="submit" value="Добавить" />
                   </form>
                 </div>
                 <div>
@@ -62,6 +63,33 @@
                         </#list>
                     </table>
                 </div>
+            </div>
 
+                <div>
+                    <table border="2">
+                        <tr>
+                            <th>Название</th>
+                            <th>Тип</th>
+                            <th>Район</th>
+                            <th>Редактировать</th>
+                        </tr>
+                        <#list places as place>
+                            <tr>
+                                <th>${place.title}</th>
+                                <th>${place.type}</th>
+                                <th>${place.area}</th>
+                                <th>
+                                     <form action="/admin/place/delete/${place.id}" method="post">
+                                         <input type="hidden" name="_csrf" value="${_csrf.token}">
+                                         <input type="submit" value="DELETE">
+                                     </form>
+                                </th>
+                            </tr>
+                            <#else>
+                            <h3>мест нет</h3>
+                        </#list>
+                    </table>
+                </div>
+    </div>
 </body>
 </html>

@@ -33,7 +33,7 @@ public class UserService {
         if(userRepository.findByEmail(email)!=null) return false;
         user.setActive(true);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.getRoles().add(Role.ROLE_USER);
+        user.getRoles().add(Role.ROLE_ADMIN);
         user.setPercents(0);
         log.info("Saving new User with email: {}", email);
         userRepository.save(user);
@@ -50,10 +50,6 @@ public class UserService {
         log.info("Saving new Place by user with email: {}", email);
         userRepository.save(user);
     }
-
-    //public int countPlaces(User user){
-        //return user.getPlaces().;
-    //}
 
 
     public List<User> list(){

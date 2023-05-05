@@ -54,7 +54,7 @@ public class PlaceService {
             image3 = toImageEntity(file3); //Преобразование из файла в модель фотографии
             place.addImageToPlace(image3);
         }
-        log.info("Saving new Place. Title: {}; Owner: {}", place.getTitle(), place.getOwner());
+        log.info("Saving new Place. Title: {}", place.getTitle());
         Place placeFromDb = placeRepository.save(place);
         placeFromDb.setPreviewImageId(placeFromDb.getImages().get(0).getId());
         placeRepository.save(place);

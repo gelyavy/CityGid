@@ -33,6 +33,7 @@ public class GidController {
         return "places";
     }
 
+    //список всех мест
     @GetMapping("/allPlaces")
     public String allPlaces(@RequestParam(name = "title", required = false) String title, Model model, Principal principal){
         model.addAttribute("places", placeService.listPlaces(title));
@@ -45,21 +46,21 @@ public class GidController {
     @GetMapping("/place/{id}")
     public String placeInfo(@PathVariable Long id, Model model, Principal principal){
         Place place = placeService.getPlaceById(id);
-        model.addAttribute("user", placeService.getUserByPrincipal(principal));
+        User user = placeService.getUserByPrincipal(principal);
+        model.addAttribute("user", user);
         model.addAttribute("place", place);
         model.addAttribute("images", place.getImages());
+        model.addAttribute("flag", user.getPlaces().contains(placeService.getPlaceById(id)));
         return "place-info";
     }
 
 
     //Добавление посещённого места в личный кабинет
     @PostMapping("/place/{id}")
-    public String addPlaceById(@PathVariable Long id, Model model, Principal principal){
-        //model.addAttribute("user", placeService.getUserByPrincipal(principal));
-        //model.addAttribute("place", placeService.getPlaceByPrincipal(principal));
-        User user = userRepository.findByEmail(principal.getName());
+    public String addPlaceById(@PathVariable Long id, Principal principal) {
+        User user = placeService.getUserByPrincipal(principal);
         userService.addPlace(user, id);
-        return "redirect:/";
+        return "redirect:/place/{id}";
     }
 
     //ПОСТ-запрос о создании нового места. Логика прописана в сервисе.
@@ -71,11 +72,5 @@ public class GidController {
         return "redirect:/";
     }
 
-    //ПОСТ-запрос об удалении места. Логика прописана в сервисе.
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    @PostMapping("/place/delete/{id}")
-    public String deletePlace(@PathVariable Long id){
-        placeService.deletePlace(id);
-        return "redirect:/";
-    }
+
 }

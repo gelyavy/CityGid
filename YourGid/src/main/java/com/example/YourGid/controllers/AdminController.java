@@ -2,6 +2,7 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.User;
 import com.example.YourGid.models.enums.Role;
+import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,10 +20,13 @@ import java.util.Map;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 public class AdminController {
     private final UserService userService;
+    private final PlaceService placeService;
 
     @GetMapping("/admin")
     public String admin(Model model){
         model.addAttribute("users", userService.list());
+        model.addAttribute("places", placeService.ListPlaces());
+
         return "admin";
     }
 
@@ -48,6 +52,13 @@ public class AdminController {
     @PostMapping("/admin/user/edit")
     public String userEdit(@RequestParam("userId") User user, @RequestParam Map<String, String> form){
         userService.changeUserRoles(user, form);
+        return "redirect:/admin";
+    }
+
+    //ПОСТ-запрос об удалении места. Логика прописана в сервисе.
+    @PostMapping("/admin/place/delete/{id}")
+    public String deletePlace(@PathVariable("id") Long id){
+        placeService.deletePlace(id);
         return "redirect:/admin";
     }
 }
