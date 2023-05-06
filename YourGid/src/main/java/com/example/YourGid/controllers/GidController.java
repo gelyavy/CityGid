@@ -2,6 +2,7 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.Place;
 import com.example.YourGid.models.User;
+import com.example.YourGid.repositories.EventRepository;
 import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
 import com.example.YourGid.services.PlaceService;
@@ -24,12 +25,14 @@ public class GidController {
     private final UserRepository userRepository;
     private final PlaceRepository placeRepository;
     private final UserService userService;
+    private final EventRepository eventRepository;
 
     //ГЕТ-запрос по поиску места по названию. Логика прописана в сервисе.
     @GetMapping("/")
     public String places(Model model, Principal principal){
         model.addAttribute("places", placeService.ListPlaces());
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
+        model.addAttribute("events", eventRepository.findLast5Events());
         return "places";
     }
 
@@ -49,7 +52,7 @@ public class GidController {
         User user = placeService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         model.addAttribute("place", place);
-        model.addAttribute("images", place.getImages());
+        model.addAttribute("images", place.getPlacesImages());
         model.addAttribute("flag", user.getPlaces().contains(placeService.getPlaceById(id)));
         return "place-info";
     }
@@ -69,7 +72,7 @@ public class GidController {
     public String createPlace(@RequestParam("file1") MultipartFile file1, @RequestParam("file2") MultipartFile file2,
                               @RequestParam("file3") MultipartFile file3, Place place) throws IOException {
         placeService.savePlace(place, file1, file2, file3);
-        return "redirect:/";
+        return "redirect:/admin";
     }
 
 

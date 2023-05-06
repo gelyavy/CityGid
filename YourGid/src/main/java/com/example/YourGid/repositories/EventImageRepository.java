@@ -1,0 +1,8 @@
+package com.example.YourGid.repositories;
+
+import com.example.YourGid.models.EventImage;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EventImageRepository extends JpaRepository<EventImage, Long> {
+
+}

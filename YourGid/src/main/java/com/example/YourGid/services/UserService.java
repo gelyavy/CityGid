@@ -1,8 +1,10 @@
 package com.example.YourGid.services;
 
+import com.example.YourGid.models.Event;
 import com.example.YourGid.models.Place;
 import com.example.YourGid.models.User;
 import com.example.YourGid.models.enums.Role;
+import com.example.YourGid.repositories.EventRepository;
 import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +28,7 @@ public class UserService {
     private final PlaceRepository placeRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final EventRepository eventRepository;
 
     //Создание нового пользователя
     public boolean createUser(User user){
@@ -48,6 +51,14 @@ public class UserService {
         user.setPlacesAmount(user.getPlacesAmount()+1);
         user.setPercents((int)(user.getPlacesAmount()/110*100));
         log.info("Saving new Place by user with email: {}", email);
+        userRepository.save(user);
+    }
+
+    public void addEvent(User user, Long id){
+        String email = user.getEmail();
+        Event event = eventRepository.getById(id);
+        user.getEvents().add(event);
+        log.info("Saving new event by: {}", email);
         userRepository.save(user);
     }
 

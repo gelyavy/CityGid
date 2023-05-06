@@ -1,7 +1,10 @@
 package com.example.YourGid.controllers;
 
-import com.example.YourGid.models.Image;
-import com.example.YourGid.repositories.ImageRepository;
+import com.example.YourGid.models.EventImage;
+import com.example.YourGid.models.PlaceImage;
+import com.example.YourGid.repositories.EventImageRepository;
+import com.example.YourGid.repositories.PlaceImageRepository;
+import com.example.YourGid.repositories.PlaceRepository;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.ByteArrayResource;
@@ -17,16 +20,27 @@ import java.io.ByteArrayInputStream;
 @RestController
 @RequiredArgsConstructor
 public class ImageController {
-    private final ImageRepository imageRepository;
+    private final PlaceImageRepository placeImageRepository;
+    private final EventImageRepository eventImageRepository;
 
-    @GetMapping("/images/{id}")
-    private ResponseEntity<?> getImageById(@PathVariable Long id){
-        Image image = imageRepository.findById(id).orElse(null);
+    @GetMapping("/placeImages/{id}")
+    private ResponseEntity<?> getPlaceImageById(@PathVariable Long id){
+        PlaceImage placeImage = placeImageRepository.findById(id).orElse(null);
         return ResponseEntity.ok()
-                .header("fileName", image.getOriginalFileName())
-                .contentType(MediaType.valueOf(image.getContentType()))
-                .contentLength(image.getSize())
-                .body(new InputStreamResource(new ByteArrayInputStream(image.getBytes())));
+                .header("fileName", placeImage.getOriginalFileName())
+                .contentType(MediaType.valueOf(placeImage.getContentType()))
+                .contentLength(placeImage.getSize())
+                .body(new InputStreamResource(new ByteArrayInputStream(placeImage.getBytes())));
+    }
+
+    @GetMapping("/eventImages/{id}")
+    private ResponseEntity<?> getEventImageById(@PathVariable Long id){
+        EventImage eventImage = eventImageRepository.findById(id).orElse(null);
+        return ResponseEntity.ok()
+                .header("fileName", eventImage.getOriginalFileName())
+                .contentType(MediaType.valueOf(eventImage.getContentType()))
+                .contentLength(eventImage.getSize())
+                .body(new InputStreamResource(new ByteArrayInputStream(eventImage.getBytes())));
     }
 
 

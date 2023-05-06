@@ -27,14 +27,12 @@ public class Place {
     private String area;
     @Column(name = "address")
     private String address;
-    @Column(name = "date")
-    private String date;
     @Column(name = "description", columnDefinition = "text")
     private String description;
 
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy= "place")
-    private List<Image> images = new ArrayList<>();
+    private List<PlaceImage> placesImages = new ArrayList<>();
     private Long previewImageId;
     private LocalDateTime dateOfCreated;
 
@@ -43,8 +41,8 @@ public class Place {
         dateOfCreated = LocalDateTime.now();
     }
 
-    public void addImageToPlace(Image image){
-        image.setPlace(this);
-        images.add(image);
+    public void addImageToPlace(PlaceImage placeImage){
+        placeImage.setPlace(this);
+        placesImages.add(placeImage);
     }
 }

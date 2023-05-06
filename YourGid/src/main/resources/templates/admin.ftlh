@@ -13,11 +13,26 @@
     <div class="uk-section uk-section-muted">
             <div class="uk-child-width-1-3@xl uk-child-width-1-2@m uk-child-width-1-1@s uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
                 <div>
-                  <h1>Добавить карточку</h1>
+                  <h1>Добавить place</h1>
                   <form action="/place/create" method="post" enctype="multipart/form-data">
                     Название: <input type="text" name="title"/><br><br>
                     Тип: <input type="text" name="type"/><br><br>
                     Район: <input type="text" name="area"/><br><br>
+                    Адрес: <input type="text" name="address"/><br><br>
+                    Описание: <input type="text" name="description"/><br><br>
+                    Первая фотография: <input type="file" name="file1"/><br><br>
+                    Вторая фотография: <input type="file" name="file2"/><br><br>
+                    Третья фотография: <input type="file" name="file3"/><br><br>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <input type="submit" value="Добавить" />
+                  </form>
+                </div><br><br>
+
+                <div>
+                  <h1>Добавить event</h1>
+                  <form action="/event/create" method="post" enctype="multipart/form-data">
+                    Название: <input type="text" name="title"/><br><br>
+                    Тип: <input type="text" name="type"/><br><br>
                     Адрес: <input type="text" name="address"/><br><br>
                     Дата: <input type="text" name="date"/><br><br>
                     Описание: <input type="text" name="description"/><br><br>
@@ -27,7 +42,8 @@
                     <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <input type="submit" value="Добавить" />
                   </form>
-                </div>
+                </div><br><br>
+
                 <div>
                     <table border="1">
                         <tr>
@@ -63,7 +79,7 @@
                         </#list>
                     </table>
                 </div>
-            </div>
+            </div><br><br>
 
                 <div>
                     <table border="2">

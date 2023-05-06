@@ -45,6 +45,10 @@ public class User implements UserDetails {
     @CollectionTable(name = "user_place", joinColumns = @JoinColumn(name = "user_id"))
     private Set<Place> places = new HashSet<>();
 
+    @ElementCollection(targetClass = Event.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_event", joinColumns = @JoinColumn(name = "user_id"))
+    private Set<Event> events = new HashSet<>();
+
 
     @PrePersist
     private void init(){

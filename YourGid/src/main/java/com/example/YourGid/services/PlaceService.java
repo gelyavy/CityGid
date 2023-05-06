@@ -1,7 +1,8 @@
 package com.example.YourGid.services;
 
-import com.example.YourGid.models.Image;
+import com.example.YourGid.models.PlaceImage;
 import com.example.YourGid.models.Place;
+import com.example.YourGid.models.PlaceImage;
 import com.example.YourGid.models.User;
 import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
@@ -38,9 +39,9 @@ public class PlaceService {
 
     //Метод, сохраняющий новое место.
     public void savePlace(Place place, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
-        Image image1;
-        Image image2;
-        Image image3;
+        PlaceImage image1;
+        PlaceImage image2;
+        PlaceImage image3;
         if (file1.getSize()!=0){
             image1 = toImageEntity(file1); //Преобразование из файла в модель фотографии
             image1.setPreviewImage(true);
@@ -56,7 +57,7 @@ public class PlaceService {
         }
         log.info("Saving new Place. Title: {}", place.getTitle());
         Place placeFromDb = placeRepository.save(place);
-        placeFromDb.setPreviewImageId(placeFromDb.getImages().get(0).getId());
+        placeFromDb.setPreviewImageId(placeFromDb.getPlacesImages().get(0).getId());
         placeRepository.save(place);
     }
 
@@ -68,8 +69,8 @@ public class PlaceService {
     }
 
     //Преобразование из файла в модель фотографии
-    private Image toImageEntity(MultipartFile file) throws IOException {
-        Image image = new Image();
+    private PlaceImage toImageEntity(MultipartFile file) throws IOException {
+        PlaceImage image = new PlaceImage();
         image.setName(file.getName());
         image.setOriginalFileName(file.getOriginalFilename());
         image.setContentType(file.getContentType());
