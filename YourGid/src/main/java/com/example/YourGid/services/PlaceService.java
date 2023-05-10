@@ -57,7 +57,7 @@ public class PlaceService {
         }
         log.info("Saving new Place. Title: {}", place.getTitle());
         Place placeFromDb = placeRepository.save(place);
-        placeFromDb.setPreviewImageId(placeFromDb.getPlacesImages().get(0).getId());
+        placeFromDb.setPreviewImageId(placeFromDb.getPlaceImages().get(0).getId());
         placeRepository.save(place);
     }
 

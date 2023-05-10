@@ -23,15 +23,20 @@ public class UserController {
 
     //Регистрация
     @GetMapping("/registration")
-    public String registration(){
+    public String registration(Model model, Principal principal){
+        model.addAttribute("user", placeService.getUserByPrincipal(principal));
         return "registration";
     }
 
     @GetMapping("/login")
-    public String login(){return "login";}
+    public String login(Model model, Principal principal){
+        model.addAttribute("user", placeService.getUserByPrincipal(principal));
+        return "login";
+    }
 
     @PostMapping("/registration")
-    public String createUser(User user, Model model){
+    public String createUser(User user, Model model, Principal principal){
+        model.addAttribute("user", placeService.getUserByPrincipal(principal));
         if (userService.createUser(user) == false){
             model.addAttribute("errorMessage", "Пользователь с email: "+ user.getEmail() + "уже существует");
             return "registration";

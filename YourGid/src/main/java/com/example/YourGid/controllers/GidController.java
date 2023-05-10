@@ -52,7 +52,7 @@ public class GidController {
         User user = placeService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         model.addAttribute("place", place);
-        model.addAttribute("images", place.getPlacesImages());
+        model.addAttribute("images", place.getPlaceImages());
         model.addAttribute("flag", user.getPlaces().contains(placeService.getPlaceById(id)));
         return "place-info";
     }

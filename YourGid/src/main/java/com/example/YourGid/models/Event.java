@@ -32,7 +32,7 @@ public class Event {
     private String description;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy= "event")
-    private List<EventImage> eventsImages = new ArrayList<>();
+    private List<EventImage> eventImages = new ArrayList<>();
     private Long previewImageId;
     private LocalDateTime dateOfCreated;
 
@@ -43,6 +43,6 @@ public class Event {
 
     public void addImageToEvent(EventImage eventImage){
         eventImage.setEvent(this);
-        eventsImages.add(eventImage);
+        eventImages.add(eventImage);
     }
 }

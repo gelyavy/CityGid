@@ -43,7 +43,7 @@ public class EventController {
         User user = placeService.getUserByPrincipal(principal);
         model.addAttribute("user", user);
         model.addAttribute("event", event);
-        model.addAttribute("images", event.getEventsImages());
+        model.addAttribute("images", event.getEventImages());
         model.addAttribute("flag", user.getEvents().contains(eventService.getEventById(id)));
         return "event-info";
     }

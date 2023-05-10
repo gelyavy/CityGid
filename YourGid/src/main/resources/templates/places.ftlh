@@ -14,85 +14,6 @@
 
     <link rel = "stylesheet" href = "/static/css/style.css">
 
-    <style media="screen">
-        a{
-            text-decoration:none;
-        }
-
-        a:hover { text-decoration:none; }
-
-        .menu2{
-             line-height:20px;
-             font-size:20px;
-             color:#000;
-        }
-
-        .menu1{
-            font-size: 20px;
-            font-family:arial;
-         }
-
-        .menu3{
-            line-height:70px;
-            font-size: 55px;
-            color:#000;
-        }
-
-        .MainText{
-            font-size:35px;
-            color:#000;
-        }
-
-        .PreMainText{
-            font-size:24px;
-            color:#000;
-        }
-
-        .Font16White{
-            font-size:16px;
-            color:#fff;
-        }
-
-        .Font22Black{
-            font-size:22px;
-            color:#000;
-        }
-
-        .Font22White{
-            font-size:22px;
-            color:#fff;
-        }
-
-        .BigButton{
-            border-width:2px;
-            border-radius: 35px;
-            border-color:#000;
-            background: #000;
-        }
-
-        .LinkStyle{
-            text-decoration: none;
-            color: #000;
-            font-size:20px;
-        }
-
-        .ImageStyle{
-            border-radius: 20px;
-        }
-
-        .CardStyle{
-            border-radius: 25px;
-            background-color: #000;
-        }
-
-        .OrangeCard{
-            border-radius: 25px;
-            background-color: #F95B32;
-        }
-
-
-
-    </style>
 </head>
 <body>
 <div class="BackColor uk-padding uk-padding-remove-horizontal">
@@ -234,14 +155,11 @@
         <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list places as place>
                 <div>
-                    <div class="CardStyle uk-padding-small uk-card uk-card-body">
-                        <img src="/images/${place.previewImageId}" class="ImageStyle">
+                    <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
-                            <form action="/place/${place.id}" method="get">
-                                <input class="BigButton Font16White uk-text-lowercase uk-button uk-button-secondary" type="submit" value="go" href="/place/${place.id}"/>
-                            </form>
-                    </div>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
+                    </div></a>
                 </div>
             </#list>
         </div>
@@ -249,34 +167,31 @@
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
     </div>
 
-            <div class="uk-position-relative uk-visible-toggle uk-light uk-padding-small uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
-                <ul class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
-                    <#list places as place>
-                        <#if (place.id==102)||(place.id==106)||(place.id==90)>
-                            <li>
-                                <div>
-                                    <div class="uk-card uk-card-default">
-                                        <div class="uk-card-media-top">
-                                            <img src="/images/${place.previewImageId}" alt="logo">
-                                        </div>
-                                        <div class="uk-card-body uk-padding-small">
-                                            <h3 class="uk-card-title">${place.title}</h3>
-                                            <p>${place.description}</p>
-                                            <form action="/place/${place.id}" method="get">
-                                                <input class="uk-button uk-button-secondary" type="submit" value="Подробнее"/>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </#if>
-                    </#list>
-                </ul>
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
+        <div class="uk-text-bolder Font22Black">
+            <p class="uk-margin-small-bottom">Афиша<img src="/static/images/ПрямаяСтрелкаЧёрная.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+        </div>
+        <a href="/allEvents"><div class="LinkStyle">
+                    <p>подробнее</p>
+        </div></a>
+    </div>
 
-                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
+        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+            <#list events as event>
+                <div>
+                    <a href="/place/${event.id}"><div class="EventCardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/eventImages/${event.previewImageId}" class="ImageStyle">
+                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${event.title}</p>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ИконкаЧасы.png" height="20px" width="20px" class="uk-margin-small-right">${event.date}</p>
+                    </div></a>
+                </div>
+            </#list>
+        </div>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+    </div>
 
-            </div>
 </div>
 </body>
 </html>

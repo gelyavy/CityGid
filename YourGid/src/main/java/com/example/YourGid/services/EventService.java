@@ -51,7 +51,7 @@ public class EventService {
         }
         log.info("Saving new Event. Title: {}", event.getTitle());
         Event eventFromDb = eventRepository.save(event);
-        eventFromDb.setPreviewImageId(eventFromDb.getEventsImages().get(0).getId());
+        eventFromDb.setPreviewImageId(eventFromDb.getEventImages().get(0).getId());
         eventRepository.save(event);
     }
 

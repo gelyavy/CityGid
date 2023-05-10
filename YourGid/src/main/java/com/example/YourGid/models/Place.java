@@ -32,7 +32,7 @@ public class Place {
 
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy= "place")
-    private List<PlaceImage> placesImages = new ArrayList<>();
+    private List<PlaceImage> placeImages = new ArrayList<>();
     private Long previewImageId;
     private LocalDateTime dateOfCreated;
 
@@ -43,6 +43,6 @@ public class Place {
 
     public void addImageToPlace(PlaceImage placeImage){
         placeImage.setPlace(this);
-        placesImages.add(placeImage);
+        placeImages.add(placeImage);
     }
 }
