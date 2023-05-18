@@ -18,6 +18,10 @@
             background-color:#EFEFEF;
         }
 
+        .BackColorOrange{
+            background-color:#F95B32;
+        }
+
         .defaultBlack{
             color:#000;
         }
@@ -44,13 +48,38 @@
             color:#000;
         }
 
+        .About{
+            font-size:85px;
+            color:#000;
+        }
+
         .Font16White{
             font-size:16px;
             color:#fff;
         }
 
+        .Font16Black{
+            font-size:16px;
+            color:#000;
+        }
+
+        .Font19Black{
+            font-size:19px;
+            color:#000;
+        }
+
+        .Font19White{
+            font-size:19px;
+            color:#fff;
+        }
+
         .Font22Black{
             font-size:22px;
+            color:#000;
+        }
+
+        .Font25Black{
+            font-size:25px;
             color:#000;
         }
 
@@ -71,6 +100,13 @@
             background: #000;
         }
 
+        .BigButtonTransparent{
+            border-width:3px;
+            border-radius: 35px;
+            border-color:#000;
+            background: #EFEFEF;
+        }
+
         .LinkStyle{
             text-decoration: none;
             color: #000;
@@ -79,6 +115,10 @@
 
         .ImageStyle{
             border-radius: 20px;
+        }
+
+        .ImageInfoStyle{
+            border-radius: 25px;
         }
 
         .PlaceCardStyle{
@@ -90,6 +130,24 @@
             border-radius: 25px;
             background-color: #000;
             border: 5px solid #F95B32;
+        }
+
+        .InfoCardOrange{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            border: 5px solid #F95B32;
+        }
+
+        .InfoCardBlack{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            border: 5px solid #000;
+        }
+
+        .InfoCardWhite{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            border: 5px solid #fff;
         }
 
         .OrangeCard{
