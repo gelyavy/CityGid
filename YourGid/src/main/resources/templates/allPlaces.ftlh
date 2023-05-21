@@ -45,7 +45,7 @@
     <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-align-center uk-flex uk-flex-center uk-child-width-1-2@xl uk-child-width-1-2@m uk-child-width-1-2@s uk-width-1-1">
         <form class="uk-search uk-search-default black" action="/allPlaces" method="get">
             <span uk-search-icon></span>
-            <input class="black uk-search-input uk-align-center uk-margin-remove" type="search" aria-label="Search">
+            <input class="black uk-search-input uk-align-center uk-margin-remove" type="text" name="title">
         </form>
     </div>
 
