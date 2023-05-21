@@ -33,7 +33,7 @@ public class EventController {
     @GetMapping("/allEvents")
     public String allEvents(@RequestParam(name = "title", required = false) String title, Model model, Principal principal){
         model.addAttribute("events", eventService.listEvents(title));
-        model.addAttribute("user", placeService.getPlaceByPrincipal(principal));
+        model.addAttribute("user", placeService.getUserByPrincipal(principal));
         return "allEvents";
     }
 

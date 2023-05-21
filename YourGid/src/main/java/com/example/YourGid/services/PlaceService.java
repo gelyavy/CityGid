@@ -93,11 +93,5 @@ public class PlaceService {
         if (principal==null) return new User();
         return userRepository.findByEmail(principal.getName());
     }
-
-    public Place getPlaceByPrincipal(Principal principal){
-        if (principal==null) return new Place();
-        return (Place) placeRepository.findByTitle(principal.getName());
-    }
-
 }
 

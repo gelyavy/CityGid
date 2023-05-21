@@ -15,55 +15,52 @@
     <link rel = "stylesheet" href = "/static/css/style.css">
 
     <style media="screen">
-            img{
-                border-radius: 25px 25px 0 0;
-            }
+        .black{
+            border: 2px solid #000;
+        }
 
-            .smallLine{
-                padding:5px;
-            }
-
+        .All{
+            min-height: 100vh;
+        }
     </style>
 </head>
 <body>
-    <nav class="BackWhite uk-navbar-container uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove-left uk-background-default" uk-navbar>
-              <div class="uk-navbar-left uk-margin-left">
-                   <a href="/" class="uk-navbar-item uk-logo"><img src="/static/images/Логотип.png" height="50px" width="160px" alt="NAME"></a>
+<div class="All BackColor uk-padding uk-padding-remove-horizontal">
+    <div class="BackColor">
+           <div class="uk-flex uk-flex-between">
+              <div class="uk-padding uk-padding-remove-vertical">
+                   <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
               </div>
-
-              <div class="uk-navbar-right uk-margin-remove-top">
-                    <div class="uk-navbar-item">
-                        <#if user.email??>
-                                <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="LOGO"></a>
-                        </#if>
-                    </div>
+              <div class="uk-padding uk-padding-remove-vertical">
+                <#if !(user.email??)>
+                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
+                <#if (user.email??)>
+                    <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
               </div>
-    </nav>
+           </div>
+    </div>
 
-    <div class="BackWhite uk-padding-small uk-margin-remove uk-align-center uk-flex uk-flex-center uk-child-width-1-2@xl uk-child-width-1-2@m uk-child-width-1-2@s uk-width-1-1">
-        <form class="uk-search uk-search-default gray" action="/allPlaces" method="get">
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-align-center uk-flex uk-flex-center uk-child-width-1-2@xl uk-child-width-1-2@m uk-child-width-1-2@s uk-width-1-1">
+        <form class="uk-search uk-search-default black" action="/allPlaces" method="get">
             <span uk-search-icon></span>
-            <input class="uk-search-input uk-align-center uk-margin-remove" type="search" aria-label="Search">
+            <input class="black uk-search-input uk-align-center uk-margin-remove" type="search" aria-label="Search">
         </form>
     </div>
 
-    <div class="BackWhite uk-padding-small uk-margin-remove uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid">
-        <#list places as place>
-             <div class="smallLine">
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="/images/${place.previewImageId}" alt="logo">
-                    </div>
-                    <div class="uk-card-body uk-padding-small">
-                        <h3 class="uk-card-title">${place.title}</h3>
-                        <p>${place.description}</p>
-                        <form action="/place/${place.id}" method="get">
-                            <input class="uk-button uk-button-secondary" type="submit" value="Подробнее"/>
-                        </form>
-                    </div>
+        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+            <#list places as place>
+                <div>
+                    <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
+                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
+                    </div></a>
                 </div>
-             </div>
-        </#list>
-    </div>
+            </#list>
+        </div>
+
+</div>
 </body>
 </html>
