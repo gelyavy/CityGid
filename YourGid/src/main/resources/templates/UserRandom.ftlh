@@ -15,46 +15,53 @@
     <link rel = "stylesheet" href = "/static/css/style.css">
 
     <style media="screen">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" async></script>
-
+          .All{
+            min-height: 100vh;
+          }
     </style>
-
 </head>
 <body>
-        <nav class="BackWhite uk-navbar-container uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove-left uk-background-default" uk-navbar>
-            <div class="uk-navbar-left uk-margin-left">
-                <a href="/" class="uk-navbar-item uk-logo"><img src="/static/images/Логотип.png" height="50px" width="160px" alt="NAME"></a>
-            </div>
-        </nav>
+<div class="All BackColor uk-padding uk-padding-remove-horizontal">
+    <div class="BackColor">
+           <div class="uk-flex uk-flex-between">
+              <div class="uk-padding uk-padding-remove-vertical">
+                   <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
+              </div>
+              <div class="uk-padding uk-padding-remove-vertical">
+                <#if !(user.email??)>
+                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
+                <#if (user.email??)>
+                    <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                </#if>
+              </div>
+           </div>
+    </div>
 
+    <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
+        <div class="uk-margin-remove uk-inline" uk-grid>
+            <p class="About uk-text-bold uk-margin-remove uk-padding-remove">RANDOM<img src="/static/images/Звездочка.png" height="20px" width="20px" class="uk-margin-small-left uk-margin-small-bottom"></p>
+        </div>
+    </div>
 
-        <form action="/profile/random" method="get">
-            <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-close-default">Default</button>
-        </form>
-
-        <div id="modal-close-default" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div class="uk-section uk-section-muted uk-padding"">
-                            <div class="uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-2@s uk-child-width-1-2 uk-text-center" uk-grid>
-                                <div>
-                                    <div class="uk-card uk-card-default">
-                                        <div class="uk-card-media-top">
-                                            <img src="/images/${place.previewImageId}" alt="logo">
-                                        </div>
-                                        <div class="uk-card-body">
-                                            <h3 class="uk-card-title">${place.title}</h3>
-                                            <p>${place.description}</p>
-                                            <form action="/place/${place.id}" method="get">
-                                                <input class="uk-button uk-button-secondary" type="submit" value="Подробнее"/>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-            </div>
+        <div class="uk-child-width-1-3@xl uk-child-width-1-3@m uk-child-width-1-1 uk-grid-small uk-padding-large uk-padding-remove-vertical uk-flex uk-flex-center uk-margin-remove">
+                <div class="uk-padding uk-padding-remove-vertical">
+                    <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
+                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
+                    </div></a>
+                </div>
         </div>
 
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-padding">
+                <form action="/profile/random" method="get">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <input class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary" type="submit" value="ещё раз"/>
+                </form>
+            </div>
+        </div>
+</div>
 </body>
 </html>

@@ -41,7 +41,7 @@
 
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-remove uk-inline" uk-grid>
-            <p class="About uk-text-bold uk-margin-remove uk-padding-remove">ABOUT<img src="/static/images/Звездочка.png" height="40px" width="40px" class="uk-margin-small-left"></p>
+            <p class="About uk-text-bold uk-margin-remove uk-padding-remove">ABOUT<img src="/static/images/Звездочка.png" height="40px" width="40px" class="uk-margin-small-left uk-margin-small-bottom"></p>
         </div>
     </div>
 
@@ -63,15 +63,15 @@
         <div class="uk-padding-small uk-padding-remove-vertical">
             <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">как называется?</p>
-                <p class="Font25Black uk-text-bold uk-margin-remove">${place.title}</p>
+                <p class="Font25Black uk-margin-remove">${place.title}</p>
                 <p class="Font25Black uk-margin-small-bottom uk-margin-small-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${place.area}</p>
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
-            <div class="InfoCardBlack uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
+            <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">куда идти?</p>
                 <p class="Font25Black uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${place.address}</p>
-                <#if (flag==true)>
+                <#if (flag==false)>
                      <form action="/place/${place.id}" method="post">
                           <input type="hidden" name="_csrf" value="${_csrf.token}">
                           <input class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary" type="submit" value="добавить"/>
@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
-            <div class="InfoCardWhite uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
+            <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">подробнее?</p>
                 <p class="Font19Black uk-margin-small-bottom uk-margin-remove">${place.description}</p>
             </div>

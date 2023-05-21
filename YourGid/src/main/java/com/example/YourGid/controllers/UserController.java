@@ -61,6 +61,13 @@ public class UserController {
         return "UserPlaces";
     }
 
+    @GetMapping("/profile/{id}/events")
+    public String getUserEvents(@PathVariable("id") Long id, Model model){
+        User user = userService.getUserById(id);
+        model.addAttribute("user",user);
+        return "UserEvents";
+    }
+
     //Рандомные места
     @GetMapping("/profile/random")
     public String getUserRandomPlace(Model model, Principal principal){

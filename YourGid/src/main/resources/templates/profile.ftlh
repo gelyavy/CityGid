@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="uk-padding-small">
-                    <a href="/profile/${user.id}/places"><div class="OrangeCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
+                    <a href="/profile/${user.id}/events"><div class="OrangeCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="Font22Black defaultBlack uk-position-top-right uk-padding">
                             <p>следи за новостями</p>
                         </div>

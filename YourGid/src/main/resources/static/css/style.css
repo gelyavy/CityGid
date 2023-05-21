@@ -48,8 +48,13 @@
             color:#000;
         }
 
+        .MainTextOrange{
+            font-size:35px;
+            color:#F95B32;
+        }
+
         .About{
-            font-size:85px;
+            font-size:65px;
             color:#000;
         }
 
