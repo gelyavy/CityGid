@@ -69,7 +69,7 @@
                           </div>
                           <div class = "uk-flex uk-flex-center">
                                 <input type="hidden" name="_csrf" value="${_csrf.token}">
-                                <input class="uk-text-center uk-margin-remove uk-button uk-button-secondary" type="submit" value="         Регистрация         "/>
+                                <input class="uk-text-center uk-margin-remove uk-button uk-button-secondary" type="submit" value="Регистрация"/>
                           </div>
                           <div>
                             <a href="/login"><div class="LinkStyle uk-flex uk-flex-center uk-margin-small-top">

@@ -42,20 +42,13 @@
            </div>
     </div>
 
-    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-align-center uk-flex uk-flex-center uk-child-width-1-2@xl uk-child-width-1-2@m uk-child-width-1-2@s uk-width-1-1">
-        <form class="uk-search uk-search-default black" action="/allEvents" method="get">
-            <span uk-search-icon></span>
-            <input class="black uk-search-input uk-align-center uk-margin-remove" type="text" name="title">
-        </form>
-    </div>
-
-        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
-            <#list events as event>
+        <div class="uk-margin-small-right uk-margin-top uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+            <#list cafes as cafe>
                 <div>
-                    <a href="/event/${event.id}"><div class="EventCardStyle uk-padding-small uk-card uk-card-body">
-                        <img src="/eventImages/${event.previewImageId}" class="ImageStyle">
-                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${event.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ИконкаЧасы.png" height="17px" width="17px" class="uk-margin-small-right">${event.date}</p>
+                    <a href="/place/${cafe.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
+                        <img src="/placeImages/${cafe.previewImageId}" class="ImageStyle">
+                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${cafe.title}</p>
+                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${cafe.area}</p>
                     </div></a>
                 </div>
             </#list>

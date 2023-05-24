@@ -185,8 +185,8 @@
             color:#000;
         }
 
-        .Font120Black{
-            font-size: 30px;
+        .Font120White{
+            font-size: 70px;
             color:#fff
         }
 
@@ -202,6 +202,15 @@
             font-size: 40px;
             color:#fff;
             font-family:arial;
+        }
+
+        .FotoCard{
+            border-radius:25px;
+            background: url(/static/images/card.jpg);
+        }
+
+        .modal1{
+            border-radius:25px;
         }
 
 

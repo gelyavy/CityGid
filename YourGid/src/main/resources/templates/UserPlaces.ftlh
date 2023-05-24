@@ -42,9 +42,9 @@
         </div>
     </div>
 
-        <div class="uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+        <div class="uk-margin-small-right uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list user.places as place>
-                <div class="uk-margin-small-left">
+                <div>
                     <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
                         <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>

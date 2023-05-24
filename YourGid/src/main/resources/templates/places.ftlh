@@ -192,6 +192,28 @@
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
     </div>
 
+    <div class="BackColor uk-section uk-padding-small">
+        <div class="uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
+            <div class="uk-margin-remove-bottom uk-margin-remove-top uk-flex uk-flex-center">
+                <div>
+                    <a href="/testPage"><div class="OrangeCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
+                        <div class="uk-position-top-right uk-padding">
+                            <img src="/static/images/стрелка.png" height="60px" width="60px" alt="стрелка">
+                        </div>
+                        <div class="Font22Black defaultBlack uk-position-top-left uk-padding">
+                           <p>открывай город</p>
+                        </div>
+                        <div class="Font40Black uk-position-bottom uk-padding uk-text-bold">
+                            <p>места</p>
+                            <p>в которых</p>
+                            <p>я  бывал</p>
+                        </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
