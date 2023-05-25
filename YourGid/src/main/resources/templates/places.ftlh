@@ -62,77 +62,52 @@
         <ul class="uk-slider-items uk-grid-small">
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt="">
+                    <a href="/Cafe"><img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt="">
+                    <a href="/Theatre"><img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипБар.png" width="75" height="75" alt="">
+                   <a href="/Bar"><img src="/static/images/ЛоготипБар.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипМагазин.png" width="75" height="75" alt="">
+                    <a href="/Shop"><img src="/static/images/ЛоготипМагазин.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипКофейня.png" width="75" height="75" alt="">
+                    <a href="/Coffee"><img src="/static/images/ЛоготипКофейня.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt="">
+                    <a href="/Museum"><img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt="">
+                    <a href="/Other"><img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипПарк.png" width="75" height="75" alt="">
+                    <a href="/Park"><img src="/static/images/ЛоготипПарк.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt="">
+                    <a href="/Sport"><img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
             <li>
                 <div class="uk-panel">
-                    <img src="/static/images/ЛоготипМузеи.png" width="75" height="75" alt="">
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="/static/images/ЛоготипТеатр.png" width="75" height="75" alt="">
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="/static/images/ЛоготипЕда.png" width="75" height="75" alt="">
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="/static/images/ЛоготипБар.png" width="75" height="75" alt="">
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="/static/images/ЛоготипСпорт.png" width="75" height="75" alt="">
-                </div>
-            </li>
-            <li>
-                <div class="uk-panel">
-                    <img src="/static/images/ЛоготипОтдых.png" width="75" height="75" alt="">
+                    <a href="/Hotel"><img src="/static/images/ЛоготипОтель.png" width="75" height="75" alt=""></a>
                 </div>
             </li>
         </ul>

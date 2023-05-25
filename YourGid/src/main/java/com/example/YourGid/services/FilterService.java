@@ -19,4 +19,41 @@ public class FilterService {
         return filterRepository.findCafe();
     }
 
+    public List<Place> listBar(){
+        return filterRepository.findBar();
+    }
+
+    public List<Place> listCoffee(){
+        return filterRepository.findCoffee();
+    }
+
+    public List<Place> listHotel(){
+        return filterRepository.findHotel();
+    }
+
+    public List<Place> listMuseum(){
+        return filterRepository.findMuseum();
+    }
+
+    public List<Place> listOther(){
+        return filterRepository.findOther();
+    }
+
+    public List<Place> listPark(){
+        return filterRepository.findPark();
+    }
+
+    public List<Place> listShop(){
+        return filterRepository.findShop();
+    }
+
+    public List<Place> listSport(){
+        return filterRepository.findSport();
+    }
+
+    public List<Place> listTheatre(){
+        return filterRepository.findTheatre();
+    }
+
+
 }

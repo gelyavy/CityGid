@@ -42,7 +42,13 @@
            </div>
     </div>
 
-        <div class="uk-margin-small-right uk-margin-top uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
+        <div class="uk-text-bolder Font22Black">
+            <p class="uk-margin-small-bottom">Кафе<img src="/static/images/ПрямаяСтрелкаОранжевая.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+        </div>
+    </div>
+
+        <div class="uk-margin-small-right uk-margin-small-top uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list cafes as cafe>
                 <div>
                     <a href="/place/${cafe.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
