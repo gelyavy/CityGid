@@ -66,7 +66,9 @@ public class EventService {
     }
 
     public void deleteEvent(Long id){
-        eventRepository.deleteById(id);
+        eventRepository.deleteEventFromUsersById(id);
+        eventRepository.deleteEventFromImagesById(id);
+        eventRepository.deleteEventById(id);
     }
 
     public Event getEventById(Long id){

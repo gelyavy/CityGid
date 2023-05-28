@@ -2,6 +2,7 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.User;
 import com.example.YourGid.models.enums.Role;
+import com.example.YourGid.services.EventService;
 import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -20,13 +21,14 @@ import java.util.Map;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 public class AdminController {
     private final UserService userService;
+    private final EventService eventService;
     private final PlaceService placeService;
 
     @GetMapping("/admin")
     public String admin(Model model){
         model.addAttribute("users", userService.list());
         model.addAttribute("places", placeService.ListPlaces());
-
+        model.addAttribute("events", eventService.ListEvents());
         return "admin";
     }
 
@@ -58,8 +60,13 @@ public class AdminController {
     //ПОСТ-запрос об удалении места. Логика прописана в сервисе.
     @PostMapping("/admin/place/delete/{id}")
     public String deletePlace(@PathVariable("id") Long id){
-
         placeService.deletePlace(id);
+        return "redirect:/admin";
+    }
+
+    @PostMapping("/admin/event/delete/{id}")
+    public String deleteEvent(@PathVariable("id") Long id){
+        eventService.deleteEvent(id);
         return "redirect:/admin";
     }
 }

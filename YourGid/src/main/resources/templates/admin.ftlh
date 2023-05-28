@@ -106,6 +106,32 @@
                         </#list>
                     </table>
                 </div>
+
+                <div>
+                    <table border="2">
+                        <tr>
+                            <th>Название</th>
+                            <th>Тип</th>
+                            <th>Район</th>
+                            <th>Редактировать</th>
+                        </tr>
+                        <#list events as event>
+                            <tr>
+                                <th>${event.title}</th>
+                                <th>${event.type}</th>
+                                <th>${event.address}</th>
+                                <th>
+                                     <form action="/admin/event/delete/${event.id}" method="post">
+                                         <input type="hidden" name="_csrf" value="${_csrf.token}">
+                                         <input type="submit" value="DELETE">
+                                     </form>
+                                </th>
+                            </tr>
+                            <#else>
+                            <h3>ивентов нет</h3>
+                        </#list>
+                    </table>
+                </div>
     </div>
 </body>
 </html>
