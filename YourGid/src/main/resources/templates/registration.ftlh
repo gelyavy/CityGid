@@ -49,7 +49,7 @@
                           </div>
                           <div class="uk-text-center uk-margin-bottom">
                              <div class="uk-inline">
-                                 <input class="uk-input uk-form-large" type="text" name="username" placeholder="Введите имя">
+                                 <input class="uk-input uk-form-large" type="text" name="name" placeholder="Введите имя">
                              </div>
                           </div>
                           <div class="uk-text-center uk-margin-bottom">

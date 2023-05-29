@@ -29,6 +29,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
     private final EventRepository eventRepository;
+    private final PlaceService placeService;
 
     //Создание нового пользователя
     public boolean createUser(User user){
@@ -49,7 +50,7 @@ public class UserService {
         Place place = placeRepository.getById(id);
         user.getPlaces().add(place);
         user.setPlacesAmount(user.getPlacesAmount()+1);
-        user.setPercents((int)(user.getPlacesAmount()/110*100));
+        user.setPercents((int)(user.getPlacesAmount()/placeService.countAllPlaces()*100));
         log.info("Saving new Place by user with email: {}", email);
         userRepository.save(user);
     }

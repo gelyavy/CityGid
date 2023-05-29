@@ -114,9 +114,10 @@
                     <div class="OrangeCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="Font40Black uk-position-top-center uk-text-center uk-padding uk-text-bold">
                             <p>нам пора</p>
-                            <p>прощаться</p>
+                            <p>прощаться,</p>
+                            <p>${user.name}</p>
                         </div>
-                        <form action="/logout" method="post" class="uk-position-center uk-margin-top">
+                        <form action="/logout" method="post" class="uk-position-bottom-center uk-padding-large uk-padding-remove-horizontal">
                             <input type="hidden" name="_csrf" value="${_csrf.token}">
                             <input type="submit" class="BigButton Font22White uk-text-lowercase uk-button uk-button-large" value="           выход           "/>
                         </form>

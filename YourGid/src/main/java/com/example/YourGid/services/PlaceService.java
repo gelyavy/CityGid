@@ -26,7 +26,9 @@ public class PlaceService {
     private final PlaceRepository placeRepository;
     private final UserRepository userRepository;
 
-
+    int countAllPlaces(){
+        return placeRepository.countAll();
+    }
 
     //Метод, возвращающий список мест в поиске по его названию.
     public List<Place> listPlaces(String title) {
