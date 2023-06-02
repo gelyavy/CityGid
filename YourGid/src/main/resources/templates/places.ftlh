@@ -171,14 +171,14 @@
         <div class="uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
             <div class="uk-margin-remove-bottom uk-margin-remove-top uk-flex uk-flex-center">
                 <div>
-                    <a href="/testPage"><div class="OrangeCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
+                    <a href="/testPage"><div class="BlackCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="uk-position-top-right uk-padding">
                             <img src="/static/images/стрелка.png" height="60px" width="60px" alt="стрелка">
                         </div>
-                        <div class="Font22Black defaultBlack uk-position-top-left uk-padding">
+                        <div class="Font22White defaultBlack uk-position-top-left uk-padding">
                            <p>открывай город</p>
                         </div>
-                        <div class="Font40Black uk-position-bottom uk-padding uk-text-bold">
+                        <div class="Font40White uk-position-bottom uk-padding uk-text-bold">
                             <p>места</p>
                             <p>в которых</p>
                             <p>я  бывал</p>
@@ -186,6 +186,21 @@
                     </div></a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="uk-margin-top">
+        <img src="/static/images/ЗаголовокПазл.png" height="100px" width="180px" alt="PUZZLE" class="uk-align-center uk-margin-remove-bottom">
+    </div>
+
+    <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
+        <div class="uk-margin-top" uk-grid>
+            <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">about</p>
+            <p class="Font22Black uk-margin-remove">ffff fffff ffff fffff ffff ffff ffffffff fffffff fffffff fffffffff ffffffff fff f  f fff fff fff f</p>
+        </div>
+        <div class="uk-margin-top" uk-grid>
+            <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">features</p>
+            <p class="Font22Black uk-margin-remove">ffff fffff ffff fffff ffff ffff ffffffff fffffff fffffff fffffffff ffffffff fff f  f fff fff fff f</p>
         </div>
     </div>
 
