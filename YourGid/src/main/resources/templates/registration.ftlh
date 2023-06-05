@@ -19,12 +19,12 @@
           }
 
           .All{
-            min-height: 80vh;
+            min-height: 100vh;
           }
     </style>
 </head>
 <body>
-<div class="BackColor uk-padding uk-padding-remove-horizontal">
+<div class="All BackColor uk-padding uk-padding-remove-horizontal">
     <div class="BackColor">
            <div class="uk-flex uk-flex-between">
               <div class="uk-padding uk-padding-remove-vertical">
@@ -42,7 +42,7 @@
     </div>
 
 
-    <div class="All uk-child-width-1-3@xl uk-child-width-1-3@m uk-child-width-1-1@s uk-child-width-1-1 uk-padding-large uk-padding-remove-horizontal uk-margin-large-top" uk-grid>
+    <div class="uk-child-width-1-3@xl uk-child-width-1-3@m uk-child-width-1-1@s uk-child-width-1-1 uk-padding-large uk-padding-remove-horizontal uk-margin-large-top" uk-grid>
                    <form action="/registration" method="post" class="uk-align-center">
                           <div class="Font22Black uk-text-bolder uk-text-center uk-margin-small-top">
                               <p>регистрация<img src="/static/images/ДлиннаяОранжеваяСтрелка.png" height="15px" width="90px"></p>

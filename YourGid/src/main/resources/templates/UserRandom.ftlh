@@ -16,7 +16,7 @@
 
     <style media="screen">
           .All{
-            min-height: 100vh;
+            min-height: 70vh;
           }
     </style>
 </head>
@@ -64,4 +64,24 @@
         </div>
 </div>
 </body>
+<div class="footer uk-padding-small">
+    <div class="uk-padding-small uk-padding-remove-vertical">
+        <div class="Font16White">
+            <p class="uk-margin-small-bottom">With the support of:</p>
+        </div>
+    </div>
+
+    <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
+        <div class="uk-padding-small uk-padding-remove-vertical">
+            <div>
+                <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+            </div>
+        </div>
+        <div class="=uk-inline">
+            <div class="uk-position-center">
+                <img src="/static/images/1.png" alt="LOGO">
+            </div>
+        </div>
+    </div>
+</div>
 </html>
