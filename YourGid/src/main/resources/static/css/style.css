@@ -83,6 +83,11 @@
             color:#000;
         }
 
+        .Font25Orange{
+            font-size:25px;
+            color:#F95B32;
+        }
+
         .Font25Black{
             font-size:25px;
             color:#000;
@@ -129,6 +134,11 @@
         .PlaceCardStyle{
             border-radius: 25px;
             background-color: #000;
+        }
+
+        .ArticleCardStyle{
+            border-radius: 25px;
+            background-color: #EFEFEF;
         }
 
         .EventCardStyle{

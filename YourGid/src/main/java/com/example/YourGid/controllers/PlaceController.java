@@ -2,9 +2,11 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.Place;
 import com.example.YourGid.models.User;
+import com.example.YourGid.repositories.ArticleRepository;
 import com.example.YourGid.repositories.EventRepository;
 import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
+import com.example.YourGid.services.ArticleService;
 import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +28,7 @@ public class PlaceController {
     private final PlaceRepository placeRepository;
     private final UserService userService;
     private final EventRepository eventRepository;
+    private final ArticleService articleService;
 
 
     @GetMapping("/")
@@ -33,6 +36,7 @@ public class PlaceController {
         model.addAttribute("places", placeService.ListPlaces());
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
         model.addAttribute("events", eventRepository.findLast5Events());
+        model.addAttribute("articles", articleService.findAll());
         return "places";
     }
 

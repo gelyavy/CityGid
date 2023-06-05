@@ -33,16 +33,77 @@
            </div>
     </div>
 
-        <div class="uk-margin-small-right uk-margin-small-left uk-margin-top uk-child-width-1-5@xl uk-child-width-1-5@m uk-child-width-1-5@s uk-child-width-1-2 uk-grid-small uk-flex uk-flex-center">
-            <#list places as place>
+        <div class="BackColor uk-margin-top" uk-grid>
+            <img src="/static/images/НазваниеХайлайт.png" height="100px" width="180px" alt="PUZZLE" class="uk-align-center">
+        </div>
+
+    <div class="BackColor uk-align-center uk-margin-remove-top uk-width-3-4@xl uk-width-3-4@m" uk-grid>
+        <p class="Font16Black">Страницы истории - это проект, направленный на повышение уровня интереса молодёжи к истории родного города. Вместе с экскурсоводами из туристического агентства Царицынский гид мы подготовили историю нынешних точек притяжения молодёжи города Волгограда</p>
+    </div>
+
+        <div class="uk-align-center uk-margin-small-right uk-margin-small-left uk-margin-top uk-child-width-1-4@xl uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-1 uk-grid-small uk-flex uk-flex-center" uk-grid>
                 <div>
-                    <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
-                        <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
-                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
-                    </div></a>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
                 </div>
-            </#list>
+                <div>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="uk-align-center uk-margin-small-right uk-margin-small-left uk-margin-top uk-child-width-1-4@xl uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-1 uk-grid-small uk-flex uk-flex-center" uk-grid>
+                <div>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card PlaceCardStyle">
+                        <div class="uk-card-media-top">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="uk-card-body uk-padding-small">
+                            <h3 class="uk-card-title">Bar</h3>
+                        </div>
+                    </div>
+                </div>
         </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
-
+    <link rel = "stylesheet" href = "/static/css/style.css">
     <title>CITYGID</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,18 +14,10 @@
 
     <link rel = "stylesheet" href = "/static/css/style.css">
 
-    <style media="screen">
-        .black{
-            border: 2px solid #000;
-        }
-
-        .All{
-            min-height: 100vh;
-        }
-    </style>
 </head>
+
 <body>
-<div class="All BackColor uk-padding uk-padding-remove-horizontal">
+<div class="BackColor uk-padding uk-padding-remove-horizontal">
     <div class="BackColor">
            <div class="uk-flex uk-flex-between">
               <div class="uk-padding uk-padding-remove-vertical">
@@ -43,19 +35,23 @@
     </div>
 
     <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
-        <div class="uk-text-bolder Font22Black">
-            <p class="uk-margin-small-bottom">Магазины<img src="/static/images/ПрямаяСтрелкаОранжевая.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+        <div class="uk-text-bolder Font25Orange">
+            <p class="uk-margin-small-bottom"><img src="/static/images/ПрямаяСтрелкаЧёрная.png" height="25px" width="25px" class="uk-margin-small-right">${article.number}</p>
+            <p class="Font22Black uk-margin-remove uk-padding-remove uk-align-right">${article.date}</p>
         </div>
     </div>
 
-        <div class="uk-margin-small-right uk-margin-small-top uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
-            <#list shops as shop>
-                <div>
-                    <a href="/place/${shop.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
-                        <img src="/placeImages/${shop.previewImageId}" class="ImageStyle">
-                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${shop.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${shop.area}</p>
-                    </div></a>
-                </div>
-            </#list>
+    <div>
+        <div class="uk-padding-small uk-padding-remove-vertical uk-text-center uk-align-center uk-margin-remove" uk-grid>
+            <p class="Font35Black uk-text-bold uk-margin-remove uk-padding-remove">${article.title}</p>
         </div>
+    </div>
+
+    <div class="uk-padding uk-padding-remove-vertical uk-align-center uk-margin-bottom uk-margin-remove-top" uk-grid>
+        <p class="Font22Black uk-margin-remove uk-padding-remove">${article.description}</p>
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -37,7 +37,7 @@
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-top" uk-grid>
             <p class="MainText uk-text-bold uk-margin-remove"><img src="/static/images/НазваниеХайлайт.png" height="100px" width="180px" alt="PUZZLE">  - Is who? </p>
-            <p class="PreMainText uk-text-bold uk-margin-remove">проект о любви к своему городу.</p>
+            <p class="PreMainText uk-text-bold uk-margin-remove">небольшой проект о большой любви к родному городу.</p>
             <p class="PreMainText uk-text-bold uk-margin-remove-top uk-margin-small-bottom">подборки уникальных мест.</p>
         </div>
         <div class="uk-inline uk-padding-remove uk-margin-remove">
@@ -196,12 +196,37 @@
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-top" uk-grid>
             <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">about</p>
-            <p class="Font22Black uk-margin-remove">ffff fffff ffff fffff ffff ffff ffffffff fffffff fffffff fffffffff ffffffff fff f  f fff fff fff f</p>
+            <p class="Font22Black uk-margin-remove">Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус</p>
         </div>
         <div class="uk-margin-top" uk-grid>
             <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">features</p>
-            <p class="Font22Black uk-margin-remove">ffff fffff ffff fffff ffff ffff ffffffff fffffff fffffff fffffffff ffffffff fff f  f fff fff fff f</p>
+            <p class="Font22Black uk-margin-remove">Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус</p>
         </div>
+    </div>
+
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
+        <div class="uk-text-bolder Font22Black">
+            <p class="uk-margin-small-bottom">Статьи<img src="/static/images/ГлазИконка.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+        </div>
+    </div>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
+        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+            <#list articles as article>
+                <div>
+                    <a href="/article/${article.id}"><div class="uk-card ArticleCardStyle BackColor">
+                        <div class="uk-card-media-top BackColor">
+                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                        </div>
+                        <div class="BackColor Font16Black uk-card-body uk-padding-small uk-padding-remove-vertical">
+                            <p>${article.title}</p>
+                        </div>
+                    </div></a>
+                </div>
+            </#list>
+        </div>
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
     </div>
 
 </div>

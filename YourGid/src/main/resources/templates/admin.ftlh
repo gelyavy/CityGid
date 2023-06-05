@@ -45,6 +45,19 @@
                 </div><br><br>
 
                 <div>
+                  <h1>Добавить статью</h1>
+                  <form action="/article/create" method="post" enctype="multipart/form-data">
+                    Название: <input type="text" name="title"/><br><br>
+                    Тип: <input type="text" name="number"/><br><br>
+                    Дата: <input type="text" name="date"/><br><br>
+                    Описание: <input type="text" name="description"/><br><br>
+                    Фотография: <input type="file" name="file1"/><br><br>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
+                    <input type="submit" value="Добавить" />
+                  </form>
+                </div><br><br>
+
+                <div>
                     <table border="1">
                         <tr>
                             <th>Email</th>
@@ -122,6 +135,32 @@
                                 <th>${event.address}</th>
                                 <th>
                                      <form action="/admin/event/delete/${event.id}" method="post">
+                                         <input type="hidden" name="_csrf" value="${_csrf.token}">
+                                         <input type="submit" value="DELETE">
+                                     </form>
+                                </th>
+                            </tr>
+                            <#else>
+                            <h3>ивентов нет</h3>
+                        </#list>
+                    </table>
+                </div>
+
+                <div>
+                    <table border="2">
+                        <tr>
+                            <th>Номер</th>
+                            <th>Название</th>
+                            <th>Дата</th>
+                            <th>Редактировать</th>
+                        </tr>
+                        <#list articles as article>
+                            <tr>
+                                <th>${article.number}</th>
+                                <th>${article.title}</th>
+                                <th>${article.date}</th>
+                                <th>
+                                     <form action="/admin/article/delete/${article.id}" method="post">
                                          <input type="hidden" name="_csrf" value="${_csrf.token}">
                                          <input type="submit" value="DELETE">
                                      </form>

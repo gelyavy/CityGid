@@ -2,6 +2,7 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.User;
 import com.example.YourGid.models.enums.Role;
+import com.example.YourGid.services.ArticleService;
 import com.example.YourGid.services.EventService;
 import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
@@ -23,12 +24,14 @@ public class AdminController {
     private final UserService userService;
     private final EventService eventService;
     private final PlaceService placeService;
+    private final ArticleService articleService;
 
     @GetMapping("/admin")
     public String admin(Model model){
         model.addAttribute("users", userService.list());
         model.addAttribute("places", placeService.ListPlaces());
         model.addAttribute("events", eventService.ListEvents());
+        model.addAttribute("articles", articleService.findAll());
         return "admin";
     }
 
@@ -67,6 +70,12 @@ public class AdminController {
     @PostMapping("/admin/event/delete/{id}")
     public String deleteEvent(@PathVariable("id") Long id){
         eventService.deleteEvent(id);
+        return "redirect:/admin";
+    }
+
+    @PostMapping("/admin/article/delete/{id}")
+    public String deleteArticle(@PathVariable("id") Long id){
+        articleService.deleteArticle(id);
         return "redirect:/admin";
     }
 }
