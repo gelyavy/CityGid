@@ -25,7 +25,7 @@
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
                 <#if !(user.email??)>
-                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                    <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
                 <#if (user.email??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
@@ -36,7 +36,7 @@
 
     <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
         <div class="uk-text-bolder Font25Orange">
-            <p class="uk-margin-small-bottom"><img src="/static/images/ПрямаяСтрелкаЧёрная.png" height="25px" width="25px" class="uk-margin-small-right">${article.number}</p>
+            <p class="uk-margin-small-bottom"><a href="/"><img src="/static/images/ПрямаяСтрелкаЧёрная.png" height="25px" width="25px" class="uk-margin-small-right"></a>${article.number}</p>
             <p class="Font22Black uk-margin-remove uk-padding-remove uk-align-right">${article.date}</p>
         </div>
     </div>

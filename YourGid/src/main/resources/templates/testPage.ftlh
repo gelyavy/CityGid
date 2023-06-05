@@ -24,7 +24,7 @@
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
                 <#if !(user.email??)>
-                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                    <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
                 <#if (user.email??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>

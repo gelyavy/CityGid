@@ -33,7 +33,7 @@
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
                 <#if !(user.email??)>
-                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                    <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
                 <#if (user.email??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
@@ -44,7 +44,7 @@
 
     <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
         <div class="uk-text-bolder Font22Black">
-            <p class="uk-margin-small-bottom">Спорт<img src="/static/images/ПрямаяСтрелкаОранжевая.png" height="25px" width="25px" class="uk-margin-small-left"></p>
+            <p class="uk-margin-small-bottom">Спорт<a href="/"><img src="/static/images/ПрямаяСтрелкаОранжевая.png" height="25px" width="25px" class="uk-margin-small-left"></a></p>
         </div>
     </div>
 

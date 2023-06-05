@@ -24,7 +24,7 @@
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
                 <#if !(user.email??)>
-                    <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
+                    <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
                 <#if (user.email??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
@@ -176,12 +176,12 @@
                             <img src="/static/images/стрелка.png" height="60px" width="60px" alt="стрелка">
                         </div>
                         <div class="Font22White defaultBlack uk-position-top-left uk-padding">
-                           <p>открывай город</p>
+                           <p>изучай город</p>
                         </div>
                         <div class="Font40White uk-position-bottom uk-padding uk-text-bold">
-                            <p>места</p>
-                            <p>в которых</p>
-                            <p>я  бывал</p>
+                            <p>страницы</p>
+                            <p>истории</p>
+                            <p>Что было до?</p>
                         </div>
                     </div></a>
                 </div>
