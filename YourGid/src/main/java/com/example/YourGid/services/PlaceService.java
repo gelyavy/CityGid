@@ -82,13 +82,14 @@ public class PlaceService {
     }
 
     //Метод, удаляющий конкретное место (по id).
-    public void deletePlace(Long id){
+    public void deletePlaceFromAll(Long id){
 
         placeRepository.deletePlaceFromUsersById(id);
         placeRepository.deletePlaceFromImagesById(id);
         placeRepository.deletePlaceById(id);
 
     }
+
 
 
     //Метод, возвращающий конкретное место по его id.

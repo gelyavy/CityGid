@@ -30,4 +30,8 @@ public interface PlaceRepository extends JpaRepository<Place, Long> {
     @Query(value = "DELETE FROM places WHERE id = :id", nativeQuery = true)
     void deletePlaceById(@Param("id") Long id);
 
+    @Transactional
+    @Modifying
+    @Query(value = "DELETE FROM users_places WHERE place_id = :id_place AND user_id = :id_user", nativeQuery = true)
+    void deletePlaceFromUserById(@Param("id_place") Long Id, @Param("id_user") Long id);
 }

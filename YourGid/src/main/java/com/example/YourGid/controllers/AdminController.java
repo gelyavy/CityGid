@@ -63,7 +63,7 @@ public class AdminController {
     //ПОСТ-запрос об удалении места. Логика прописана в сервисе.
     @PostMapping("/admin/place/delete/{id}")
     public String deletePlace(@PathVariable("id") Long id){
-        placeService.deletePlace(id);
+        placeService.deletePlaceFromAll(id);
         return "redirect:/admin";
     }
 

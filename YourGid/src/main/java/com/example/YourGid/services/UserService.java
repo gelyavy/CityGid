@@ -63,6 +63,24 @@ public class UserService {
         userRepository.save(user);
     }
 
+    public void deletePlaceFromUser(Long Id, Long id){
+        placeRepository.deletePlaceFromUserById(Id, id);
+        User user = userRepository.getById(id);
+        Place place = placeRepository.getById(Id);
+        user.getPlaces().remove(place);
+        user.setPlacesAmount(user.getPlacesAmount()-1);
+        user.setPercents((int)(user.getPlacesAmount()/placeService.countAllPlaces()*100));
+        userRepository.save(user);
+    }
+
+    public void deleteEventFromUser(Long Id, Long id){
+        eventRepository.deleteEventFromUserById(Id, id);
+        User user = userRepository.getById(id);
+        Event event = eventRepository.getById(Id);
+        user.getEvents().remove(event);
+        userRepository.save(user);
+    }
+
 
     public List<User> list(){
         return userRepository.findAll();

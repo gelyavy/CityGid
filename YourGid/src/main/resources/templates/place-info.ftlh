@@ -84,14 +84,20 @@
                          </form>
                     </#if>
                 <#else>
-                     <button class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary">вы тут были;)</button>
+                    <div class="uk-flex">
+                         <button class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary uk-margin-small-right">вы тут были;)</button>
+                         <form action="/place/delete/${place.id}" method="post">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
+                            <input class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary" type="submit" value="х">
+                         </form>
+                    </div>
                 </#if>
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
             <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">подробнее?</p>
-                <p class="Font19Black uk-margin-small-bottom uk-margin-remove">${place.description}</p>
+                <p class="Font16Black uk-margin-small-bottom uk-margin-remove">${place.description}</p>
             </div>
         </div>
      </div>

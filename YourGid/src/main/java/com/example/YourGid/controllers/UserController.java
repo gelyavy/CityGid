@@ -61,6 +61,7 @@ public class UserController {
         return "UserPlaces";
     }
 
+
     @GetMapping("/profile/{id}/events")
     public String getUserEvents(@PathVariable("id") Long id, Model model){
         User user = userService.getUserById(id);

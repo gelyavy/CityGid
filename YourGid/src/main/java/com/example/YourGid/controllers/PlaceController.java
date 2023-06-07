@@ -70,6 +70,13 @@ public class PlaceController {
         return "redirect:/place/{id}";
     }
 
+    @PostMapping("/place/delete/{id}")
+    public String deletePlaceById(@PathVariable Long id, Principal principal){
+        User user = placeService.getUserByPrincipal(principal);
+        userService.deletePlaceFromUser(id, user.getId());
+        return "redirect:/place/{id}";
+    }
+
     //ПОСТ-запрос о создании нового места. Логика прописана в сервисе.
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/place/create")

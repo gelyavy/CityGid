@@ -55,6 +55,13 @@ public class EventController {
         return "redirect:/event/{id}";
     }
 
+    @PostMapping("/event/delete/{id}")
+    public String deleteEventById(@PathVariable Long id, Principal principal){
+        User user = placeService.getUserByPrincipal(principal);
+        userService.deleteEventFromUser(id, user.getId());
+        return "redirect:/event/{id}";
+    }
+
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/event/create")
     public String createEvent(@RequestParam("file1") MultipartFile file1, @RequestParam("file2") MultipartFile file2,
