@@ -118,7 +118,7 @@
                             <h3>мест нет</h3>
                         </#list>
                     </table>
-                </div>
+                </div><br><br>
 
                 <div>
                     <table border="2">
@@ -144,7 +144,7 @@
                             <h3>ивентов нет</h3>
                         </#list>
                     </table>
-                </div>
+                </div><br><br>
 
                 <div>
                     <table border="2">
@@ -170,7 +170,7 @@
                             <h3>статей нет</h3>
                         </#list>
                     </table>
-                </div>
+                </div><br><br>
     </div>
 </body>
 </html>

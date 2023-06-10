@@ -78,11 +78,6 @@
                 <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
             </div>
         </div>
-        <div class="=uk-inline">
-            <div class="uk-position-center">
-                <img src="/static/images/1.png" alt="LOGO">
-            </div>
-        </div>
     </div>
 </div>
 </html>

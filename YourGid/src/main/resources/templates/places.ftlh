@@ -181,7 +181,7 @@
                            <p>изучай город</p>
                         </div>
                         <div class="Font40White uk-position-bottom uk-padding uk-text-bold">
-                            <p>лучшие</p>
+                            <p>нетипичные</p>
                             <p>экскурсии</p>
                             <p>и туры</p>
                         </div>
@@ -218,7 +218,7 @@
                 <div>
                     <a href="/article/${article.id}"><div class="uk-card ArticleCardStyle BackColor">
                         <div class="uk-card-media-top BackColor">
-                            <img src="/static/images/wears.jpg" width="1800" height="1200" alt="" class="ImageStyle">
+                            <img src="/articleImages/${article.previewImageId}" width="1800" height="1200" alt="" class="ImageStyle">
                         </div>
                         <div class="BackColor Font16Black uk-card-body uk-padding-small uk-padding-remove-vertical">
                             <p>${article.title}</p>
@@ -244,11 +244,6 @@
             <div class="uk-padding-small uk-padding-remove-vertical">
                 <div>
                     <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
-                </div>
-            </div>
-            <div class="=uk-inline">
-                <div class="uk-position-center">
-                    <img src="/static/images/1.png" alt="LOGO">
                 </div>
             </div>
         </div>
