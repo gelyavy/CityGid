@@ -48,7 +48,7 @@
     </div>
 
     <div class="uk-padding uk-padding-remove-vertical uk-align-center uk-margin-bottom uk-margin-remove-top" uk-grid>
-        <p class="Font22Black uk-margin-remove uk-padding-remove">${article.description}</p>
+        <p style="white-space:pre-wrap" class="Font19Black uk-margin-remove uk-padding-remove">${article.description}</p>
     </div>
 
 

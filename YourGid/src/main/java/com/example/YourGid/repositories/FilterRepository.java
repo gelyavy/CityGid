@@ -8,6 +8,9 @@ import java.util.List;
 
 public interface FilterRepository extends JpaRepository<Place, Long> {
 
+    @Query(value = "SELECT * FROM places WHERE type='Тур'", nativeQuery = true)
+    List<Place> findTours();
+
     @Query(value = "SELECT * FROM places WHERE type='Кафе'", nativeQuery = true)
     List<Place> findCafe();
 

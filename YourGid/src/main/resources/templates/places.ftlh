@@ -129,13 +129,15 @@
     <div class="uk-position-relative uk-visible-toggle uk-light uk-margin-remove uk-dark" tabindex="-1" uk-slider="finite: true">
         <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list places as place>
-                <div>
-                    <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
-                        <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
-                        <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
-                    </div></a>
-                </div>
+                <#if !(place.getType()=="Тур")>
+                    <div>
+                        <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
+                            <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
+                            <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
+                            <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${place.area}</p>
+                        </div></a>
+                    </div>
+                </#if>
             </#list>
         </div>
         <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
@@ -171,7 +173,7 @@
         <div class="uk-child-width-1-1@xl uk-child-width-1-1@m uk-child-width-1-1@s uk-child-width-1-1 uk-grid-small uk-grid-match" uk-grid>
             <div class="uk-margin-remove-bottom uk-margin-remove-top uk-flex uk-flex-center">
                 <div>
-                    <a href="/testPage"><div class="BlackCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
+                    <a href="/Tours"><div class="BlackCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="uk-position-top-right uk-padding">
                             <img src="/static/images/стрелка.png" height="60px" width="60px" alt="стрелка">
                         </div>
@@ -179,9 +181,9 @@
                            <p>изучай город</p>
                         </div>
                         <div class="Font40White uk-position-bottom uk-padding uk-text-bold">
-                            <p>страницы</p>
-                            <p>истории</p>
-                            <p>Что было до?</p>
+                            <p>лучшие</p>
+                            <p>экскурсии</p>
+                            <p>и туры</p>
                         </div>
                     </div></a>
                 </div>
@@ -196,11 +198,11 @@
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-top" uk-grid>
             <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">about</p>
-            <p class="Font22Black uk-margin-remove">Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус</p>
+            <p class="Font22Black uk-margin-remove">PUZZLE - от культурных достопримечательностей и архитектурных шедевров до скрытых уголков, где можно погрузиться в атмосферу местной жизни. Откройте новые грани города. Вам остается только выбрать направление и начать свое приключение. Ваше  путешествие начинается прямо сейчас.</p>
         </div>
         <div class="uk-margin-top" uk-grid>
             <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">features</p>
-            <p class="Font22Black uk-margin-remove">Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус Супер кофейня с интересными напитками, десертами, а так же завтраками для вас и вашей семьи. В наличии множество десертов на любой вкус</p>
+            <p class="Font22Black uk-margin-remove">После регистрации вы сможете сохранять места, которые посетили, рандомно выбирать место проведения сегодняшнего дня. Не забывайте сохранять интересные афиши - вдруг пропустите что-то важное. Самое главное, чаще исследуйте родной регион, а за вашими приключениями следит счётчик в профиле, ведь наша главная цель - показать вам город на 100%.</p>
         </div>
     </div>
 
@@ -230,22 +232,24 @@
     </div>
 </div>
 </body>
-<div class="footer uk-padding-small">
-    <div class="uk-padding-small uk-padding-remove-vertical">
-        <div class="Font16White">
-            <p class="uk-margin-small-bottom">With the support of:</p>
-        </div>
-    </div>
-
-    <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
+<div class="BackColor">
+    <div class="footer uk-padding-small">
         <div class="uk-padding-small uk-padding-remove-vertical">
-            <div>
-                <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+            <div class="Font16White">
+                <p class="uk-margin-small-bottom">With the support of:</p>
             </div>
         </div>
-        <div class="=uk-inline">
-            <div class="uk-position-center">
-                <img src="/static/images/1.png" alt="LOGO">
+
+        <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div>
+                    <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+                </div>
+            </div>
+            <div class="=uk-inline">
+                <div class="uk-position-center">
+                    <img src="/static/images/1.png" alt="LOGO">
+                </div>
             </div>
         </div>
     </div>

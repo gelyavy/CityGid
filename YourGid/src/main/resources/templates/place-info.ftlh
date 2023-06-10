@@ -61,14 +61,14 @@
 
      <div class="BackColor uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-margin-small-left" uk-grid>
         <div class="uk-padding-small uk-padding-remove-vertical">
-            <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
+            <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">как называется?</p>
                 <p class="Font25Black uk-margin-remove">${place.title}</p>
                 <p class="Font25Black uk-margin-small-bottom uk-margin-small-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${place.area}</p>
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
-            <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
+            <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">куда идти?</p>
                 <p class="Font25Black uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${place.address}</p>
                 <#if (flag==false)>
@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
-            <div class="InfoCardOrange uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
+            <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">подробнее?</p>
                 <p class="Font16Black uk-margin-small-bottom uk-margin-remove">${place.description}</p>
             </div>

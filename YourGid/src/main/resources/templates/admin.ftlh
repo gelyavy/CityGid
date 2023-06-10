@@ -50,7 +50,7 @@
                     Название: <input type="text" name="title"/><br><br>
                     Тип: <input type="text" name="number"/><br><br>
                     Дата: <input type="text" name="date"/><br><br>
-                    Описание: <input type="text" name="description"/><br><br>
+                    Описание: <textarea class="uk-textarea" rows="10" name="description"></textarea><br><br>
                     Фотография: <input type="file" name="file1"/><br><br>
                     <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <input type="submit" value="Добавить" />
@@ -167,7 +167,7 @@
                                 </th>
                             </tr>
                             <#else>
-                            <h3>ивентов нет</h3>
+                            <h3>статей нет</h3>
                         </#list>
                     </table>
                 </div>

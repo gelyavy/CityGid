@@ -88,4 +88,11 @@ public class FilterController {
         return "filters/Theatre";
     }
 
+    @GetMapping("/Tours")
+    public String getTours(Model model, Principal principal){
+        model.addAttribute("tours", filterService.listTour());
+        model.addAttribute("user", placeService.getUserByPrincipal(principal));
+        return "filters/Tours";
+    }
+
 }

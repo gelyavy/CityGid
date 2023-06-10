@@ -18,6 +18,9 @@ public class FilterService {
     public List<Place> listCafe(){
         return filterRepository.findCafe();
     }
+    public List<Place> listTour(){
+        return filterRepository.findTours();
+    }
 
     public List<Place> listBar(){
         return filterRepository.findBar();

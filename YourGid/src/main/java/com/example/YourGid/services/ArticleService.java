@@ -52,6 +52,7 @@ public class ArticleService {
     }
 
     public void deleteArticle(Long id){
+        articleRepository.deleteArticleFromImagesById(id);
         articleRepository.deleteArticleById(id);
     }
 }

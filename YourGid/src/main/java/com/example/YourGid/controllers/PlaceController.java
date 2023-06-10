@@ -86,12 +86,7 @@ public class PlaceController {
         return "redirect:/admin";
     }
 
-    @GetMapping("/testPage")
-    public String test(Model model, Principal principal){
-        model.addAttribute("places", placeService.ListPlaces());
-        model.addAttribute("user", placeService.getUserByPrincipal(principal));
-        return "testPage";
-    }
+
 
 
 }

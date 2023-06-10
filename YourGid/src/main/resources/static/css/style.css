@@ -153,10 +153,9 @@
             border: 5px solid #F95B32;
         }
 
-        .InfoCardBlack{
+        .InfoCardBeige{
             border-radius: 25px;
             background-color: #EFEFEF;
-            border: 5px solid #000;
         }
 
         .InfoCardWhite{
@@ -216,6 +215,7 @@
 
         .footer{
             background-color: #000;
+            border-radius: 20px 20px 0px 0px;
         }
 
 
