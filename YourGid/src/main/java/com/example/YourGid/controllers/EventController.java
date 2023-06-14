@@ -1,10 +1,7 @@
 package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.Event;
-import com.example.YourGid.models.Place;
 import com.example.YourGid.models.User;
-import com.example.YourGid.repositories.EventRepository;
-import com.example.YourGid.repositories.UserRepository;
 import com.example.YourGid.services.EventService;
 import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
@@ -25,9 +22,7 @@ import java.security.Principal;
 @RequiredArgsConstructor
 public class EventController {
     private final EventService eventService;
-    private final EventRepository eventRepository;
     private final UserService userService;
-    private final UserRepository userRepository;
     private final PlaceService placeService;
 
     @GetMapping("/allEvents")

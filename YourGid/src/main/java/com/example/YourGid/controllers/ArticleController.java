@@ -1,11 +1,8 @@
 package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.Article;
-import com.example.YourGid.models.Place;
-import com.example.YourGid.models.User;
 import com.example.YourGid.services.ArticleService;
 import com.example.YourGid.services.PlaceService;
-import com.example.YourGid.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

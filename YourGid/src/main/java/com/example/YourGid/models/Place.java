@@ -1,9 +1,6 @@
 package com.example.YourGid.models;
 
 import lombok.*;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,14 +10,14 @@ import java.util.Set;
 
 @Getter
 @Setter
-@Entity //Указывает, что данный класс (БИН) является сущностью.
-@Table(name = "places") //Указывает на имя таблицы, в которой будут храниться поля класса.
-@AllArgsConstructor //Аатоматическое создание конструкторов всех полей класса.
-@NoArgsConstructor //Автоматическое создание конструкторов всех полей класса БЕЗ ПАРАМЕТРОВ.
+@Entity
+@Table(name = "places")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Place {
-    @Id //ID КОЛОНКИ.
-    @GeneratedValue(strategy = GenerationType.AUTO) //Указывает, что данное свойство будет создавать соглсно стратегии - АВТОМАТИЧЕСКИ.
-    @Column(name = "id") //Колонка в БД, в которой будет храниться значение данного поля.
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id;
     @Column(name = "title")
     private String title;

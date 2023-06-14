@@ -2,10 +2,7 @@ package com.example.YourGid.controllers;
 
 import com.example.YourGid.models.Place;
 import com.example.YourGid.models.User;
-import com.example.YourGid.repositories.ArticleRepository;
 import com.example.YourGid.repositories.EventRepository;
-import com.example.YourGid.repositories.PlaceRepository;
-import com.example.YourGid.repositories.UserRepository;
 import com.example.YourGid.services.ArticleService;
 import com.example.YourGid.services.PlaceService;
 import com.example.YourGid.services.UserService;
@@ -22,10 +19,7 @@ import java.security.Principal;
 @Controller
 @RequiredArgsConstructor
 public class PlaceController {
-    //создаём объект сервиса, т.к. все действия прописаны в нём.
     private final PlaceService placeService;
-    private final UserRepository userRepository;
-    private final PlaceRepository placeRepository;
     private final UserService userService;
     private final EventRepository eventRepository;
     private final ArticleService articleService;
@@ -40,7 +34,6 @@ public class PlaceController {
         return "places";
     }
 
-    //список всех мест
     @GetMapping("/allPlaces")
     public String allPlaces(@RequestParam(name = "title", required = false) String title, Model model, Principal principal){
         model.addAttribute("places", placeService.listPlaces(title));
@@ -48,8 +41,6 @@ public class PlaceController {
         return "allPlaces";
     }
 
-
-    //ГЕТ-запрос об информации о КОНКРЕТНОМ месте (по его id).Логика прописана в сервисе и связана с репозиторием.
     @GetMapping("/place/{id}")
     public String placeInfo(@PathVariable Long id, Model model, Principal principal){
         Place place = placeService.getPlaceById(id);
@@ -62,7 +53,6 @@ public class PlaceController {
     }
 
 
-    //Добавление посещённого места в личный кабинет
     @PostMapping("/place/{id}")
     public String addPlaceById(@PathVariable Long id, Principal principal) {
         User user = placeService.getUserByPrincipal(principal);
@@ -77,7 +67,6 @@ public class PlaceController {
         return "redirect:/place/{id}";
     }
 
-    //ПОСТ-запрос о создании нового места. Логика прописана в сервисе.
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @PostMapping("/place/create")
     public String createPlace(@RequestParam("file1") MultipartFile file1, @RequestParam("file2") MultipartFile file2,

@@ -2,7 +2,6 @@ package com.example.YourGid.services;
 
 import com.example.YourGid.models.PlaceImage;
 import com.example.YourGid.models.Place;
-import com.example.YourGid.models.PlaceImage;
 import com.example.YourGid.models.User;
 import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
@@ -13,8 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -22,7 +19,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PlaceService {
 
-    //Создаём объект репозитория, т.к. все методы берём оттуда.
     private final PlaceRepository placeRepository;
     private final UserRepository userRepository;
 
@@ -30,7 +26,6 @@ public class PlaceService {
         return placeRepository.countAll();
     }
 
-    //Метод, возвращающий список мест в поиске по его названию.
     public List<Place> listPlaces(String title) {
         if(title!=null) return placeRepository.findByTitle(title);
 
@@ -39,7 +34,6 @@ public class PlaceService {
 
     public List<Place> ListPlaces(){ return placeRepository.findAll(); }
 
-    //Метод, сохраняющий новое место.
     public void savePlace(Place place, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
         PlaceImage image1;
         PlaceImage image2;
@@ -63,7 +57,6 @@ public class PlaceService {
         placeRepository.save(place);
     }
 
-    //Получение рандомного айди места из БД
     public Place getRandomPlacesId(){
         int i = (int) (Math.random()*(ListPlaces().size()));
         log.info("весь список: {} {}", ListPlaces().size(), i);
@@ -81,7 +74,6 @@ public class PlaceService {
         return image;
     }
 
-    //Метод, удаляющий конкретное место (по id).
     public void deletePlaceFromAll(Long id){
 
         placeRepository.deletePlaceFromUsersById(id);
@@ -91,8 +83,6 @@ public class PlaceService {
     }
 
 
-
-    //Метод, возвращающий конкретное место по его id.
     public Place getPlaceById(Long id) {
         return placeRepository.findById(id).orElse(null);
     }

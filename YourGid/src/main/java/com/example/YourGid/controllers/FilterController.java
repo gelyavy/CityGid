@@ -1,6 +1,5 @@
 package com.example.YourGid.controllers;
 
-import com.example.YourGid.repositories.FilterRepository;
 import com.example.YourGid.services.FilterService;
 import com.example.YourGid.services.PlaceService;
 import lombok.RequiredArgsConstructor;

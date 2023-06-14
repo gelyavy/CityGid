@@ -1,7 +1,6 @@
 package com.example.YourGid.repositories;
 
 import com.example.YourGid.models.Event;
-import com.example.YourGid.models.Place;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

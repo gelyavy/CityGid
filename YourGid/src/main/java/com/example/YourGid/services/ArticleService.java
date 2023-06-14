@@ -2,8 +2,6 @@ package com.example.YourGid.services;
 
 import com.example.YourGid.models.Article;
 import com.example.YourGid.models.ArticleImage;
-import com.example.YourGid.models.Place;
-import com.example.YourGid.models.PlaceImage;
 import com.example.YourGid.repositories.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

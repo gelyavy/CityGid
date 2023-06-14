@@ -9,12 +9,9 @@ import com.example.YourGid.repositories.PlaceRepository;
 import com.example.YourGid.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +28,6 @@ public class UserService {
     private final EventRepository eventRepository;
     private final PlaceService placeService;
 
-    //Создание нового пользователя
     public boolean createUser(User user){
         String email = user.getEmail();
         String number = user.getPhoneNumber();
@@ -51,7 +47,6 @@ public class UserService {
         return number != null && number.matches(phone);
     }
 
-    //Добавление посещённого места в личный кабинет
     public void addPlace(User user, Long id){
         String email = user.getEmail();
         Place place = placeRepository.getById(id);
@@ -116,7 +111,6 @@ public class UserService {
         userRepository.save(user);
     }
 
-    //Изменение роли пользователю
     public void changeUserRoles(User user, Map<String, String> form) {
         Set<String> roles = Arrays.stream(Role.values())
                 .map(Role::name)

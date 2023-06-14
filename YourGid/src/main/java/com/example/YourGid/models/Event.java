@@ -1,8 +1,6 @@
 package com.example.YourGid.models;
 
 import lombok.*;
-import org.springframework.scheduling.quartz.LocalDataSourceJobStore;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;

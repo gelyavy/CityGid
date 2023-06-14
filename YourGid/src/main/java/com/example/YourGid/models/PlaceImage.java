@@ -6,15 +6,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-import static org.hibernate.DuplicateMappingException.Type.COLUMN;
-import static org.hibernate.hql.spi.id.local.AfterUseAction.DROP;
-import static org.postgresql.core.SqlCommandType.ALTER;
-
 @Entity
 @Table(name="placesImages")
 @Data

@@ -3,9 +3,6 @@ package com.example.YourGid.models;
 
 import com.example.YourGid.models.enums.Role;
 import lombok.*;
-import org.apache.tomcat.util.digester.ArrayStack;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

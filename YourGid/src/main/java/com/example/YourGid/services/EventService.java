@@ -2,10 +2,7 @@ package com.example.YourGid.services;
 
 import com.example.YourGid.models.Event;
 import com.example.YourGid.models.EventImage;
-import com.example.YourGid.models.EventImage;
-import com.example.YourGid.models.Place;
 import com.example.YourGid.repositories.EventRepository;
-import com.example.YourGid.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,7 +17,6 @@ import java.util.List;
 public class EventService {
 
     private final EventRepository eventRepository;
-    private final UserRepository userRepository;
 
     public List<Event> listEvents (String title){
         if(title!=null) return eventRepository.findByTitle(title);
