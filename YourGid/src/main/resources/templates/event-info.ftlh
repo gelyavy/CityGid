@@ -63,14 +63,14 @@
         <div class="uk-padding-small uk-padding-remove-vertical">
             <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">как называется?</p>
-                <p class="Font25Black uk-margin-remove">${event.title}</p>
-                <p class="Font25Black uk-margin-small-bottom uk-margin-small-top"><img src="/static/images/ИконкаЧасыЧёрная.png" height="25px" width="25px" class="uk-margin-small-right">${event.date}</p>
+                <p class="Font22Black uk-margin-remove">${event.title}</p>
+                <p class="Font22Black uk-margin-small-bottom uk-margin-small-top"><img src="/static/images/ИконкаЧасыЧёрная.png" height="25px" width="25px" class="uk-margin-small-right">${event.date}</p>
             </div>
         </div>
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
             <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">куда идти?</p>
-                <p class="Font25Black uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${event.address}</p>
+                <p class="Font22Black uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${event.address}</p>
                 <#if (flag==false)>
                      <form action="/event/${event.id}" method="post">
                           <input type="hidden" name="_csrf" value="${_csrf.token}">
@@ -90,23 +90,47 @@
         <div class="uk-padding-small uk-padding-remove-vertical uk-margin-remove">
             <div class="InfoCardBeige uk-card uk-card-default uk-card-small uk-card-body uk-margin-small-top">
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">подробнее?</p>
-                <p class="Font16Black uk-margin-small-bottom uk-margin-remove">${event.description}</p>
+                <p class="Font19Black uk-margin-small-bottom uk-margin-remove">${event.description}</p>
             </div>
         </div>
      </div>
 </div>
 </body>
-<div class="footer uk-padding-small">
-    <div class="uk-padding-small uk-padding-remove-vertical">
-        <div class="Font16White">
-            <p class="uk-margin-small-bottom">With the support of:</p>
-        </div>
-    </div>
+<div class="BackColor">
+    <div class="footer uk-padding-small uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2" uk-grid>
+        <div>
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">With the support of</p>
+                </div>
+            </div>
 
-    <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
-        <div class="uk-padding-small uk-padding-remove-vertical">
-            <div>
-                <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+            <div class="uk-padding-small uk-padding-remove-horizontal uk-margin-remove" uk-grid>
+                <div class="uk-padding-small uk-padding-remove-vertical">
+                    <div>
+                        <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-padding-remove">
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">Contact us</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font17White">
+                    <p class="uk-margin-small-bottom">puzzle.volga@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <a href="/static/images/Пользовательское_Соглашение.pdf"><div class="Font17White">
+                    <p class="uk-margin-small-bottom">соглашение</p>
+                </div></a>
             </div>
         </div>
     </div>

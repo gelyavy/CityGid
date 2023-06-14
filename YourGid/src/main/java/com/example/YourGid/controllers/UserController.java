@@ -38,7 +38,7 @@ public class UserController {
     public String createUser(User user, Model model, Principal principal){
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
         if (userService.createUser(user) == false){
-            model.addAttribute("errorMessage", "Пользователь с email: "+ user.getEmail() + "уже существует");
+            model.addAttribute("errorMessage", "произошла ошибка, введите корректные данные!;)");
             return "registration";
         }
         return "redirect:/";

@@ -35,7 +35,7 @@
                 <div class="uk-padding-small">
                     <a href="/profile/${user.id}/places"><div class="WhiteCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="uk-position-top-right uk-padding">
-                            <img src="/static/images/стрелка.png" height="60px" width="60px" alt="стрелка">
+                            <img src="/static/images/стрелка.png" height="40px" width="40px" alt="стрелка">
                         </div>
                         <div class="Font22Black defaultBlack uk-position-top-left uk-padding">
                            <p>открывай город</p>
@@ -54,7 +54,7 @@
                             <p>следи за новостями</p>
                         </div>
                         <div class="uk-position-bottom-left uk-padding uk-margin-small-bottom">
-                            <img src="/static/images/ГлазИконка.png" height="60px" width="60px" alt="глаз">
+                            <img src="/static/images/ГлазИконка.png" height="40px" width="40px" alt="глаз">
                         </div>
                         <div class="Font40Black uk-position-bottom uk-padding uk-text-right uk-text-bold">
                             <p>куда</p>
@@ -86,11 +86,11 @@
                             <p>генерация</p>
                             <p>места</p>
                         </div>
-                        <div class="uk-position-bottom-left uk-padding">
-                            <img src="/static/images/ЧёрнаяГеолокация.png" height="60px" width="60px" alt="геолокация">
+                        <div class="uk-position-bottom-left uk-padding uk-margin-bottom">
+                            <img src="/static/images/ЧёрнаяГеолокация.png" height="30px" width="30px" alt="геолокация">
                         </div>
                         <div class="Font22Black uk-position-bottom-right uk-padding">
-                             <p>попробуй новое</p>
+                             <p>пробуй новое</p>
                         </div>
                     </div></a>
                 </div>
@@ -98,16 +98,16 @@
 
             <div class="uk-margin-remove-top uk-flex uk-flex-center">
                 <div class="uk-padding-small">
-                    <a href="/"><div class="BlackCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
+                    <div class="BlackCard uk-text-bolder uk-text-large uk-card uk-card-default uk-card-body uk-height-medium">
                         <div class="Font22White defaultBlack uk-position-top-left uk-padding">
-                           <p>узнавай первым</p>
+                           <p>puzzle.volga@gmail.com</p>
                         </div>
                         <div class="Font40White uk-position-bottom uk-text-left uk-padding uk-text-bold">
-                            <img src="/static/images/ИконкаЧасы.png" height="60px" width="60px" alt="часы">
-                            <p>подпишись</p>
-                            <p>на рассылку</p>
+                            <img src="/static/images/ИконкаЧасы.png" height="40px" width="40px" alt="часы">
+                            <p>связаться</p>
+                            <p>с нами</p>
                         </div>
-                    </div></a>
+                    </div>
                 </div>
 
                 <div class="uk-padding-small">

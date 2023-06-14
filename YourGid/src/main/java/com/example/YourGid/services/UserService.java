@@ -34,14 +34,21 @@ public class UserService {
     //Создание нового пользователя
     public boolean createUser(User user){
         String email = user.getEmail();
+        String number = user.getPhoneNumber();
         if(userRepository.findByEmail(email)!=null) return false;
+        if(checkNumber(number) == false) return false;
         user.setActive(true);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.getRoles().add(Role.ROLE_ADMIN);
+        user.getRoles().add(Role.ROLE_USER);
         user.setPercents(0);
         log.info("Saving new User with email: {}", email);
         userRepository.save(user);
         return true;
+    }
+
+    public boolean checkNumber(String number){
+        String phone = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
+        return number != null && number.matches(phone);
     }
 
     //Добавление посещённого места в личный кабинет

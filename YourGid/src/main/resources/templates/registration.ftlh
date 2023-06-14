@@ -77,7 +77,7 @@
                           </div>
                    </form>
                    <#if errorMessage??>
-                       <h2 style="color: red">${errorMessage}</h2>
+                       <p style="color: red" class="uk-flex uk-flex-center">${errorMessage}</p>
                    </#if>
     </div>
 </div>

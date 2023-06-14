@@ -64,17 +64,41 @@
         </div>
 </div>
 </body>
-<div class="footer uk-padding-small">
-    <div class="uk-padding-small uk-padding-remove-vertical">
-        <div class="Font16White">
-            <p class="uk-margin-small-bottom">With the support of:</p>
-        </div>
-    </div>
+<div class="BackColor">
+    <div class="footer uk-padding-small uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2" uk-grid>
+        <div>
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">With the support of</p>
+                </div>
+            </div>
 
-    <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
-        <div class="uk-padding-small uk-padding-remove-vertical">
-            <div>
-                <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+            <div class="uk-padding-small uk-padding-remove-horizontal uk-margin-remove" uk-grid>
+                <div class="uk-padding-small uk-padding-remove-vertical">
+                    <div>
+                        <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-padding-remove">
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">Contact us</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font17White">
+                    <p class="uk-margin-small-bottom">puzzle.volga@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <a href="/static/images/Пользовательское_Соглашение.pdf"><div class="Font17White">
+                    <p class="uk-margin-small-bottom">соглашение</p>
+                </div></a>
             </div>
         </div>
     </div>

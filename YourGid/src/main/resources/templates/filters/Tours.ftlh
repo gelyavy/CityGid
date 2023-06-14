@@ -34,11 +34,11 @@
     </div>
 
         <div class="BackColor uk-margin-top" uk-grid>
-            <img src="/static/images/НазваниеХайлайт.png" height="100px" width="180px" alt="PUZZLE" class="uk-align-center">
+            <img src="/static/images/НовыеМаршруты.png" height="100px" width="400px" alt="PUZZLE" class="uk-align-center uk-margin-bottom">
         </div>
 
     <div class="BackColor uk-align-center uk-margin-remove-top uk-width-3-4@xl uk-width-3-4@m" uk-grid>
-        <p class="Font16Black">В этом разделе для вас собраны самые лучшие турагенства, экскурсии, туры и экскурсоводы. Здесь люди, которые любят Волгоград, горят своим делам и хотят показать вам город таким, каким вы его ещё не знаете.</p>
+        <p class="Font19Black">В этом разделе для вас собраны нетипичные экскурсии и туры по Волгограду: для тех, кто любит приключения, эксперименты и хочет узнать город с другой стороны.</p>
     </div>
 
         <div class="uk-align-center uk-margin-small-right uk-margin-small-left uk-margin-top uk-child-width-1-3@xl uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-1 uk-grid-small uk-flex uk-flex-center" uk-grid>
@@ -49,7 +49,7 @@
                             <img src="/placeImages/${tour.previewImageId}" width="1800" height="1200" alt="" class="ImageStyle">
                         </div>
                         <div class="uk-card-body uk-padding-small">
-                            <h3 class="uk-card-title">${tour.title}</h3>
+                            <h3 class="Font22White uk-card-title">${tour.title}</h3>
                         </div>
                     </div></a>
                 </div>
@@ -58,18 +58,40 @@
 </div>
 </body>
 <div class="BackColor">
-    <div class="footer uk-padding-small">
-        <div class="uk-padding-small uk-padding-remove-vertical">
-            <div class="Font16White">
-                <p class="uk-margin-small-bottom">With the support of:</p>
+    <div class="footer uk-padding-small uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2" uk-grid>
+        <div>
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">With the support of</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-horizontal uk-margin-remove" uk-grid>
+                <div class="uk-padding-small uk-padding-remove-vertical">
+                    <div>
+                        <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="uk-padding-small uk-padding-remove-horizontal uk-child-width-1-6@l uk-child-width-1-6@m uk-child-width-1-6@s uk-child-width-1-2 uk-margin-remove" uk-grid>
+        <div class="uk-padding-remove">
             <div class="uk-padding-small uk-padding-remove-vertical">
-                <div>
-                    <img src="/static/images/logobig.png" class="uk-text-center" alt="LOGO">
+                <div class="Font16White">
+                    <p class="uk-margin-small-bottom">Contact us</p>
                 </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <div class="Font17White">
+                    <p class="uk-margin-small-bottom">puzzle.volga@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="uk-padding-small uk-padding-remove-vertical">
+                <a href="/static/images/Пользовательское_Соглашение.pdf"><div class="Font17White">
+                    <p class="uk-margin-small-bottom">соглашение</p>
+                </div></a>
             </div>
         </div>
     </div>
