@@ -92,12 +92,6 @@
                     <p class="uk-margin-small-bottom">puzzle.volga@gmail.com</p>
                 </div>
             </div>
-
-            <div class="uk-padding-small uk-padding-remove-vertical">
-                <a href="/static/images/Пользовательское_Соглашение.pdf"><div class="Font17White">
-                    <p class="uk-margin-small-bottom">соглашение</p>
-                </div></a>
-            </div>
         </div>
     </div>
 </div>
