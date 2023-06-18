@@ -1,0 +1,228 @@
+
+        .uk-button{
+           border-radius: 25px;
+           border-color:#000;
+        }
+
+        .uk-search-default{
+            border-radius: 25px;
+            color:#d1d1d1;
+            border-width:2px;
+        }
+
+        .uk-search-input{
+            border-radius: 25px;
+        }
+
+        .BackColor{
+            background-color:#EFEFEF;
+        }
+
+        .BackColorOrange{
+            background-color:#F95B32;
+        }
+
+        .defaultBlack{
+            color:#000;
+        }
+
+         .uk-form-large{
+            border-radius:25px;
+            border-color:#000;
+            border-width:2px;
+         }
+        a{
+            text-decoration:none;
+            color:#000;
+        }
+
+        a:hover { text-decoration:none; }
+
+        .MainText{
+            font-size:35px;
+            color:#000;
+        }
+
+        .PreMainText{
+            font-size:24px;
+            color:#000;
+        }
+
+        .MainTextOrange{
+            font-size:35px;
+            color:#F95B32;
+        }
+
+        .About{
+            font-size:65px;
+            color:#000;
+        }
+
+        .Font16White{
+            font-size:16px;
+            color:#fff;
+        }
+
+        .Font16Black{
+            font-size:16px;
+            color:#000;
+        }
+
+        .Font19Black{
+            font-size:19px;
+            color:#000;
+        }
+
+        .Font19White{
+            font-size:19px;
+            color:#fff;
+        }
+
+        .Font22Black{
+            font-size:22px;
+            color:#000;
+        }
+
+        .Font25Orange{
+            font-size:25px;
+            color:#F95B32;
+        }
+
+        .Font25Black{
+            font-size:25px;
+            color:#000;
+        }
+
+        .Font35Black{
+            font-size:35px;
+            color:#000;
+        }
+
+        .Font22White{
+            font-size:22px;
+            color:#fff;
+        }
+
+        .BigButton{
+            border-width:2px;
+            border-radius: 35px;
+            border-color:#000;
+            background: #000;
+        }
+
+        .BigButtonTransparent{
+            border-width:3px;
+            border-radius: 35px;
+            border-color:#000;
+            background: #EFEFEF;
+        }
+
+        .LinkStyle{
+            text-decoration: none;
+            color: #000;
+            font-size:20px;
+        }
+
+        .ImageStyle{
+            border-radius: 20px;
+        }
+
+        .ImageInfoStyle{
+            border-radius: 25px;
+        }
+
+        .PlaceCardStyle{
+            border-radius: 25px;
+            background-color: #000;
+        }
+
+        .ArticleCardStyle{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+        }
+
+        .EventCardStyle{
+            border-radius: 25px;
+            background-color: #000;
+            border: 5px solid #F95B32;
+        }
+
+        .InfoCardOrange{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            border: 5px solid #F95B32;
+        }
+
+        .InfoCardBeige{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+        }
+
+        .InfoCardWhite{
+            border-radius: 25px;
+            background-color: #EFEFEF;
+            border: 5px solid #fff;
+        }
+
+        .OrangeCard{
+            border-radius: 25px;
+            background-color: #F95B32;
+        }
+
+        .BlackCard{
+            border-radius: 25px;
+            background-color: #000;
+        }
+
+        .WhiteCard{
+            border-radius: 25px;
+            background-color: #fff;
+        }
+
+        .Font120White{
+            font-size: 120px;
+            color:#fff
+        }
+
+        .Font17White{
+            font-size: 17px;
+            color:#fff
+        }
+
+        .Font30White{
+            font-size: 30px;
+            color:#fff
+        }
+
+        .Font30Black{
+            font-size: 30px;
+            color:#000;
+        }
+
+        .Font120White{
+            font-size: 70px;
+            color:#fff
+        }
+
+        .Font40Black{
+            line-height:20px;
+            font-size: 40px;
+            color:#000;
+            font-family:arial;
+        }
+
+        .Font40White{
+            line-height:20px;
+            font-size: 40px;
+            color:#fff;
+            font-family:arial;
+        }
+
+        .footer{
+            background-color: #000;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+
+
+
