@@ -1,5 +1,7 @@
-FROM openjdk:11-jre-slim
-WORKDIR /app
-COPY target/YourGid-0.0.1-SNAPSHOT.jar yourgid.jar
+FROM maven:3.6.3-jdk-11 AS builder
+COPY ./ ./
+RUN mvn clean package -DskipTests
+FROM openjdk:11.0.7-jdk-slim
+COPY --from=builder /target/YourGid-0.0.1-SNAPSHOT.jar /yourgid.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","yourgid.jar"]
+ENTRYPOINT ["java","-jar","/yourgid.jar"]

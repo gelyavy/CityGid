@@ -1,33 +1,67 @@
-version: '3.8'
+version: '3'
 
 services:
-  postgres:
-    image: postgres
-    container_name: psql-db
+  nginx:
+    container_name: nginx
+    image: nginx:1.13
     restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - web-root:/var/www/html
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    depends_on:
+      - nginx
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    command: certonly --webroot --webroot-path=/var/www/html --email puzzle.volga@gmail.com --agree-tos --no-eff-email --force-renewal -d thisispuzzle.ru -d www.thisispuzzle.ru
+
+  postgresql:
+    container_name: postgresql
+    image: postgres:12.2-alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: CityGid
     ports:
-      - "5433:5433"
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - "5432:5432"
+    restart: always
+    networks:
+      - app-network
 
   app:
-    container_name: yourgid_app
+    container_name: simple-spring-boot-app
     build:
-      context: .
+      context: ./simple-spring-boot-app
       dockerfile: Dockerfile
-    ports:
-      - "8081:8081"
-    depends_on:
-      - postgres
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/CityGid
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=1234
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - "DB_HOST=postgresql"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=1234"
+      - "SERVER_PORT=8080"
+    expose:
+      - "8080"
+    depends_on:
+      - nginx
+      - postgresql
+    restart: always
+    networks:
+      - app-network
 
 volumes:
-  postgres-data:
+  certbot-etc:
+  certbot-var:
+  web-root:
+
+networks:
+  app-network:
+    driver: bridge
