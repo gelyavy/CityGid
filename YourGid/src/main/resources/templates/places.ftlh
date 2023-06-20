@@ -36,7 +36,7 @@
 
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-top" uk-grid>
-            <p class="MainText uk-text-bold uk-margin-remove"><img src="/static/images/НазваниеХайлайт.png" height="100px" width="180px" alt="PUZZLE">  - Is who? </p>
+            <p class="MainText uk-text-bold uk-margin-remove"><img src="/static/images/puzzle.png" height="100px" width="180px" alt="PUZZLE">  - Is who? </p>
             <p class="PreMainText uk-text-bold uk-margin-remove">небольшой проект о большой любви к родному городу.</p>
             <p class="PreMainText uk-text-bold uk-margin-remove-top uk-margin-small-bottom">подборки уникальных мест.</p>
         </div>
