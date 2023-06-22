@@ -48,13 +48,13 @@
         </div>
     </div>
 
-        <div class="uk-margin-small-right uk-margin-small-top uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+        <div class="uk-margin-small-right uk-margin-small-top uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
             <#list theatres as theatre>
                 <div>
                     <a href="/place/${theatre.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
                         <img src="/placeImages/${theatre.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${theatre.title}</p>
-                        <p class="Font16White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="17px" width="17px" class="uk-margin-small-right">${theatre.area}</p>
+                        <p class="Font15White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${theatre.area}</p>
                     </div></a>
                 </div>
             </#list>
