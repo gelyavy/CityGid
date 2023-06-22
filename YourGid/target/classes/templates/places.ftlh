@@ -191,17 +191,13 @@
         </div>
     </div>
 
-    <div class="uk-margin-top">
-        <img src="/static/images/ЗаголовокПазл.png" height="100px" width="180px" alt="PUZZLE" class="uk-align-center uk-margin-remove-bottom">
-    </div>
-
     <div class="BackColor uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s uk-margin-remove" uk-grid>
         <div class="uk-margin-top" uk-grid>
-            <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">about</p>
+            <p class="uk-margin-small-bottom Font35Black uk-align-center uk-text-bolder"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">about</p>
             <p class="Font22Black uk-margin-remove">PUZZLE - от культурных достопримечательностей и архитектурных шедевров до скрытых уголков, где можно погрузиться в атмосферу местной жизни. Откройте новые грани города. Вам остается только выбрать направление и начать свое приключение. Ваше  путешествие начинается прямо сейчас.</p>
         </div>
         <div class="uk-margin-top" uk-grid>
-            <p class="uk-margin-small-bottom Font35Black uk-align-center"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">features</p>
+            <p class="uk-margin-small-bottom Font35Black uk-align-center uk-text-bolder"><img src="/static/images/ОранжевыйКрест.png" height="25px" width="25px" class="uk-margin-small-right">features</p>
             <p class="Font22Black uk-margin-remove">После регистрации вы сможете сохранять места, которые посетили, рандомно выбирать место проведения сегодняшнего дня. Не забывайте сохранять интересные афиши - вдруг пропустите что-то важное. Самое главное, чаще исследуйте родной регион, а за вашими приключениями следит счётчик в профиле, ведь наша главная цель - показать вам город на 100%.</p>
         </div>
     </div>

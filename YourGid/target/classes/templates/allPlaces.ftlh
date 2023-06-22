@@ -49,7 +49,7 @@
         </form>
     </div>
 
-        <div class="uk-margin-small-right uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+        <div class="uk-margin-small-right uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list places as place>
                 <#if !(place.getType()=="Тур")>
                     <div>

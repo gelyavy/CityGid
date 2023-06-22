@@ -49,7 +49,7 @@
         </form>
     </div>
 
-        <div class="uk-slider-items uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
+        <div class="uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small">
             <#list events as event>
                 <div>
                     <a href="/event/${event.id}"><div class="EventCardStyle uk-padding-small uk-card uk-card-body">

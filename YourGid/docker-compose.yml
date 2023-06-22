@@ -14,8 +14,8 @@ services:
       - web-root:/var/www/html
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
-      - ./static:/var/www/CityGid/YourGid/src/main/resources/
-      - ./images:/var/www/CityGid/YourGid/src/main/resources/static/
+      - ./static:/var/CityGid/YourGid/src/main/resources/
+      - ./images:/var/CityGid/YourGid/src/main/resources/static/
     networks:
       - app-network
 
@@ -48,9 +48,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./static:/var/www/CityGid/YourGid/src/main/resources/
-      - ./images:/var/www/CityGid/YourGid/src/main/resources/static/
     ports:
       - "8080:8080"
     depends_on:
