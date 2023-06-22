@@ -42,13 +42,13 @@
         </div>
     </div>
 
-        <div class="uk-margin-small-right uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
+        <div class="uk-margin-small-right uk-margin-small-left uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
             <#list user.places as place>
                 <div>
                     <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
                         <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
-                        <p class="Font15White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
+                        <p class="Font13White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
                     </div></a>
                 </div>
             </#list>

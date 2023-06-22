@@ -42,13 +42,13 @@
         </div>
     </div>
 
-        <div class="uk-margin-small-right uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
+        <div class="uk-margin-small-right uk-margin-small-left uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
             <#list user.events as event>
                 <div>
                     <a href="/event/${event.id}"><div class="EventCardStyle uk-padding-small uk-card uk-card-body">
                         <img src="/eventImages/${event.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${event.title}</p>
-                        <p class="Font15White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ИконкаЧасы.png" height="15px" width="15px" class="uk-margin-small-right">${event.date}</p>
+                        <p class="Font13White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ИконкаЧасы.png" height="15px" width="15px" class="uk-margin-small-right">${event.date}</p>
                     </div></a>
                 </div>
             </#list>
