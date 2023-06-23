@@ -54,7 +54,7 @@
                     <a href="/place/${museum.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
                         <img src="/placeImages/${museum.previewImageId}" class="ImageStyle">
                         <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${museum.title}</p>
-                        <p class="Font13White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${museum.area}</p>
+                        <p class="Font12White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${museum.area}</p>
                     </div></a>
                 </div>
             </#list>
