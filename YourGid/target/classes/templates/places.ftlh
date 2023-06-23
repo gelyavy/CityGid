@@ -134,7 +134,7 @@
                         <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
                             <img src="/placeImages/${place.previewImageId}" class="ImageStyle">
                             <p class="Font22White uk-margin-small-top uk-margin-small-bottom">${place.title}</p>
-                            <p class="Font15White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
+                            <p class="Font13White uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/Геолокация.png" height="15px" width="15px" class="uk-margin-small-right">${place.area}</p>
                         </div></a>
                     </div>
                 </#if>
@@ -144,7 +144,7 @@
         <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
     </div>
 
-    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-top uk-flex uk-flex-between">
+    <div class="BackColor uk-padding uk-padding-remove-vertical uk-margin-small-top uk-flex uk-flex-between">
         <div class="uk-text-bolder Font22Black">
             <p class="uk-margin-small-bottom">Афиша<img src="/static/images/ПрямаяСтрелкаЧёрная.png" height="25px" width="25px" class="uk-margin-small-left"></p>
         </div>

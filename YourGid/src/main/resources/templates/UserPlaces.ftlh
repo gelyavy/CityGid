@@ -42,7 +42,7 @@
         </div>
     </div>
 
-        <div class="uk-margin-small-right uk-margin-small-left uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
+        <div class="uk-margin-right uk-margin-small-left uk-child-width-1-7@xl uk-child-width-1-5@m uk-child-width-1-3@s uk-child-width-1-2 uk-grid-small" uk-grid>
             <#list user.places as place>
                 <div>
                     <a href="/place/${place.id}"><div class="PlaceCardStyle uk-padding-small uk-card uk-card-body">
