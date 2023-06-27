@@ -32,7 +32,7 @@ public class UserController {
     public String createUser(User user, Model model, Principal principal){
         model.addAttribute("user", placeService.getUserByPrincipal(principal));
         if (userService.createUser(user) == false){
-            model.addAttribute("errorMessage", "произошла ошибка, введите корректные данные!;)");
+            model.addAttribute("errorMessage", "произошла ошибка, логин уже занят!;)");
             return "registration";
         }
         return "redirect:/";

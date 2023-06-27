@@ -89,7 +89,7 @@ public class PlaceService {
 
     public User getUserByPrincipal(Principal principal){
         if (principal==null) return new User();
-        return userRepository.findByEmail(principal.getName());
+        return userRepository.findByLogin(principal.getName());
     }
 }
 

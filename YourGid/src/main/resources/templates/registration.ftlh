@@ -31,10 +31,10 @@
                    <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
-                <#if !(user.email??)>
+                <#if !(user.login??)>
                     <a href="/registration"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
-                <#if (user.email??)>
+                <#if (user.login??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
               </div>
@@ -54,12 +54,7 @@
                           </div>
                           <div class="uk-text-center uk-margin-bottom">
                              <div class="uk-inline">
-                                  <input class="uk-input uk-form-large" type="email" name="email" placeholder="Введите почту">
-                             </div>
-                          </div>
-                          <div class="uk-text-center uk-margin-bottom">
-                             <div class="uk-inline">
-                                  <input class="uk-input uk-form-large" type="text" name="phoneNumber" placeholder="Введите номер">
+                                  <input class="uk-input uk-form-large" type="text" name="login" placeholder="Введите логин">
                              </div>
                           </div>
                           <div class="uk-text-center uk-margin-bottom">

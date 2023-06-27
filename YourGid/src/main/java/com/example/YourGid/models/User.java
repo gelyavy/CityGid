@@ -21,12 +21,10 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "email", unique = true)
-    private String email;
-    @Column(name = "phoneNumber")
-    private String phoneNumber;
     @Column(name = "name")
     private String name;
+    @Column(name = "login", unique = true)
+    private String login;
     @Column(name = "PlacesAmount")
     private Double placesAmount = 0.0;
     @Column(name = "percents")
@@ -42,8 +40,7 @@ public class User implements UserDetails {
         if (ob == null || ob.getClass() != getClass()) {return false;}
         User user = (User) ob;
         return user.id.equals(id) &&
-                user.email.equals(email) &&
-                user.phoneNumber.equals(phoneNumber) &&
+                user.login.equals(login) &&
                 user.name.equals(name) &&
                 user.placesAmount == placesAmount &&
                 user.percents == percents &&
@@ -55,8 +52,7 @@ public class User implements UserDetails {
     public int hashCode(){
         int result = 17;
         result = 31 * result + (id == null ? 0 : id.hashCode());
-        result = 31 * result + (email == null ? 0 : email.hashCode());
-        result = 31 * result + (phoneNumber == null ? 0 : phoneNumber.hashCode());
+        result = 31 * result + (login == null ? 0 : login.hashCode());
         result = 31 * result + (name == null ? 0 : name.hashCode());
         long lplacesAmount = Double.doubleToLongBits(placesAmount);
         result = result * 31 + (int)(lplacesAmount ^ (lplacesAmount >>> 32));
@@ -98,7 +94,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return email;
+        return login;
     }
 
     @Override

@@ -23,10 +23,10 @@
                    <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
-                <#if !(user.email??)>
+                <#if !(user.login??)>
                     <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
-                <#if (user.email??)>
+                <#if (user.login??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
               </div>
@@ -41,7 +41,7 @@
             <p class="PreMainText uk-text-bold uk-margin-remove-top uk-margin-small-bottom">подборки уникальных мест.</p>
         </div>
         <div class="uk-inline uk-padding-remove uk-margin-remove">
-            <#if !(user.email??)>
+            <#if !(user.login??)>
                     <img src="/static/images/ОранжеваяОбводка.png" height="190px" width="360px" class="uk-align-center uk-margin-top">
                     <div class="uk-flex uk-position-center">
                         <form action="/registration" method="get">

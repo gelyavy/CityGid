@@ -29,39 +29,32 @@ public class UserService {
     private final PlaceService placeService;
 
     public boolean createUser(User user){
-        String email = user.getEmail();
-        String number = user.getPhoneNumber();
-        if(userRepository.findByEmail(email)!=null) return false;
-        if(checkNumber(number) == false) return false;
+        String login = user.getLogin();
+        if(userRepository.findByLogin(login)!=null) return false;
         user.setActive(true);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.getRoles().add(Role.ROLE_USER);
         user.setPercents(0);
-        log.info("Saving new User with email: {}", email);
+        log.info("Saving new User with login: {}", login);
         userRepository.save(user);
         return true;
     }
 
-    public boolean checkNumber(String number){
-        String phone = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
-        return number != null && number.matches(phone);
-    }
-
     public void addPlace(User user, Long id){
-        String email = user.getEmail();
+        String login = user.getLogin();
         Place place = placeRepository.getById(id);
         user.getPlaces().add(place);
         user.setPlacesAmount(user.getPlacesAmount()+1);
         user.setPercents((int)(user.getPlacesAmount()/placeService.countAllPlaces()*100));
-        log.info("Saving new Place by user with email: {}", email);
+        log.info("Saving new Place by user with login: {}", login);
         userRepository.save(user);
     }
 
     public void addEvent(User user, Long id){
-        String email = user.getEmail();
+        String login = user.getLogin();
         Event event = eventRepository.getById(id);
         user.getEvents().add(event);
-        log.info("Saving new event by: {}", email);
+        log.info("Saving new event by: {}", login);
         userRepository.save(user);
     }
 
@@ -101,10 +94,10 @@ public class UserService {
         if (user!=null){
             if (user.isActive()){
                 user.setActive(false);
-                log.info("Ban user with id = {}; email = {}", user.getId(), user.getEmail());
+                log.info("Ban user with id = {}; login = {}", user.getId(), user.getLogin());
             } else{
                 user.setActive(true);
-                log.info("Unban user with id = {}; email = {}", user.getId(), user.getEmail());
+                log.info("Unban user with id = {}; login = {}", user.getId(), user.getLogin());
             }
 
         }

@@ -29,10 +29,10 @@
                    <a href="/"><img src="/static/images/Логотип.png" height="55px" width="125px" alt="LOGO"></a>
               </div>
               <div class="uk-padding uk-padding-remove-vertical">
-                <#if !(user.email??)>
+                <#if !(user.login??)>
                     <a href="/login"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
-                <#if (user.email??)>
+                <#if (user.login??)>
                     <a href="/profile/${user.id}"><img src="/static/images/ЛоготипПрофиля.png" height="50px" width="50px" alt="PROFILE"></a>
                 </#if>
               </div>

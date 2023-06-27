@@ -60,8 +60,8 @@
                 <div>
                     <table border="1">
                         <tr>
-                            <th>Email</th>
-                            <th>Номер телефона</th>
+                            <th>Login</th>
+                            <th>Имя</th>
                             <th>Активность</th>
                             <th>Роль</th>
                             <th>Бан</th>
@@ -69,8 +69,8 @@
                         </tr>
                         <#list users as user>
                             <tr>
-                                <th>${user.email}</th>
-                                <th>${user.phoneNumber}</th>
+                                <th>${user.login}</th>
+                                <th>${user.name}</th>
                                 <th><#if user.active>true<#else>false</#if></th>
                                 <th><#list user.roles as role>${role}</#list></th>
                                 <th>
