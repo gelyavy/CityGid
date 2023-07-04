@@ -72,7 +72,7 @@
                 <p class="uk-card-title Font35Black uk-text-bold uk-margin-remove-bottom">куда идти?</p>
                 <p class="Font22Black uk-margin-small-bottom uk-margin-remove-top"><img src="/static/images/ЧёрнаяГеолокация.png" height="25px" width="25px" class="uk-margin-small-right">${place.address}</p>
                 <#if (flag==false)>
-                    <#if (user.email??)>
+                    <#if (user.login??)>
                          <form action="/place/${place.id}" method="post">
                               <input type="hidden" name="_csrf" value="${_csrf.token}">
                               <input class="BigButtonTransparent Font19Black uk-text-bolder uk-text-lowercase uk-button uk-button-secondary" type="submit" value="добавить"/>
